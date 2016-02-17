@@ -2,7 +2,7 @@
 
 Elastic circuit tools
 
-## Papers
+## References
 
 Cortadella, Jordi, et al. "RTL Synthesis: From Logic Synthesis to Automatic Pipelining." Proceedings of the IEEE 103.11 (2015): 2061-2075.
 
