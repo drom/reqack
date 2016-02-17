@@ -29,3 +29,7 @@ Proceedings of the 43rd annual Design Automation Conference. ACM, 2006.
 ## Projects
 
 https://github.com/google/autopiper
+
+https://github.com/bvgastel/xmas
+
+https://github.com/Rotsor/phd
