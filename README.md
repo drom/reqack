@@ -14,6 +14,10 @@ Cortadella, Jordi, Marc Galceran-Oms, and Mike Kishinevsky.
 ["Elastic systems."](http://www.cs.upc.edu/~jordicf/gavina/BIB/files/memocode2010.pdf)
 Formal Methods and Models for Codesign (MEMOCODE), 2010 8th IEEE/ACM International Conference on. IEEE, 2010.
 
+Galceran-Oms, Marc, et al.
+["Automatic microarchitectural pipelining."](http://www.date-conference.org/proceedings/PAPERS/2010/DATE10/PDFFILES/IP3_08.PDF)
+Proceedings of the Conference on Design, Automation and Test in Europe. European Design and Automation Association, 2010.
+
 Carmona, Josep, et al.
 ["Elastic circuits."](http://www.eecs.ucf.edu/~mingjie/ECM6308/papers/Elastic%20circuits.pdf)
 Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions on 28.10 (2009): 1437-1455.
