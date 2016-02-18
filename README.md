@@ -34,6 +34,10 @@ Cortadella, Jordi, Mike Kishinevsky, and Bill Grundmann.
 ["Synthesis of synchronous elastic architectures."](https://www.cs.upc.edu/~jordicf/gavina/BIB/files/dac06_self.pdf)
 Proceedings of the 43rd annual Design Automation Conference. ACM, 2006.
 
+Sutherland, Ivan E.
+["Micropipelines."](http://f-cpu.seul.org/new/micropipelines.pdf)
+Communications of the ACM 32.6 (1989): 720-738.
+
 ## Projects
 
 https://github.com/google/autopiper
