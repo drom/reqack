@@ -34,6 +34,10 @@ Cortadella, Jordi, Mike Kishinevsky, and Bill Grundmann.
 ["Synthesis of synchronous elastic architectures."](https://www.cs.upc.edu/~jordicf/gavina/BIB/files/dac06_self.pdf)
 Proceedings of the 43rd annual Design Automation Conference. ACM, 2006.
 
+Ampalam, Manoj, and Montek Singh.
+["Counterflow pipelining: Architectural support for preemption in asynchronous systems using anti-tokens."](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.259.293&rep=rep1&type=pdf)
+Computer-Aided Design, 2006. ICCAD'06. IEEE/ACM International Conference on. IEEE, 2006.
+
 Carloni, Luca P., and Alberto L. Sangiovanni-Vincentelli.
 ["Combining Retiming and Recycling to Optimize the Performance of Synchronous Circuits."](http://www1.cs.columbia.edu/~luca/research/rscSBCCI03.pdf)
 SBCCI. Vol. 3. 2003.
