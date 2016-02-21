@@ -26,6 +26,10 @@ Carmona, Josep, et al.
 ["Elastic circuits."](http://www.eecs.ucf.edu/~mingjie/ECM6308/papers/Elastic%20circuits.pdf)
 Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions on 28.10 (2009): 1437-1455.
 
+Casu, Mario R., and Luca Macchiarulo.
+["Adaptive latency-insensitive protocols."](http://porto.polito.it/1642487/1/dtc07_paper.pdf)
+IEEE Design & Test of Computers 5 (2007): 442-452.
+
 Cortadella, Jordi, and Mike Kishinevsky.
 ["Synchronous elastic circuits with early evaluation and token counterflow."](https://www.cs.upc.edu/~jordicf/gavina/BIB/files/dac07_early.pdf)
 Proceedings of the 44th annual Design Automation Conference. ACM, 2007.
