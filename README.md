@@ -34,6 +34,10 @@ Cortadella, Jordi, Mike Kishinevsky, and Bill Grundmann.
 ["Synthesis of synchronous elastic architectures."](https://www.cs.upc.edu/~jordicf/gavina/BIB/files/dac06_self.pdf)
 Proceedings of the 43rd annual Design Automation Conference. ACM, 2006.
 
+Carloni, Luca P., and Alberto L. Sangiovanni-Vincentelli.
+["Combining Retiming and Recycling to Optimize the Performance of Synchronous Circuits."](http://www1.cs.columbia.edu/~luca/research/rscSBCCI03.pdf)
+SBCCI. Vol. 3. 2003.
+
 Carloni, Luca P., Kenneth L. McMillan, and Alberto L. Sangiovanni-Vincentelli.
 ["Theory of latency-insensitive design."](http://webcluster.cs.columbia.edu/~luca/research/lipTransactions.pdf)
 Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions on 20.9 (2001): 1059-1076.
