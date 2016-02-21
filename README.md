@@ -42,6 +42,10 @@ Sutherland, Ivan E.
 ["Micropipelines."](http://f-cpu.seul.org/new/micropipelines.pdf)
 Communications of the ACM 32.6 (1989): 720-738.
 
+Ramamoorthy, C. V., and Gary S. Ho.
+["Performance evaluation of asynchronous concurrent systems using Petri nets."](http://www.computer.org/csdl/trans/ts/1980/05/01702760.pdf)
+Software Engineering, IEEE Transactions on 5 (1980): 440-449.
+
 Commoner, Frederic, et al.
 ["Marked directed graphs."](http://www.sciencedirect.com/science/article/pii/S0022000071800132/pdf?md5=7fb2ad96e4f09b235e15a6b503dbd380&pid=1-s2.0-S0022000071800132-main.pdf)
 Journal of Computer and System Sciences 5.5 (1971): 511-523.
