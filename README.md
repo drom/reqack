@@ -38,6 +38,10 @@ Ampalam, Manoj, and Montek Singh.
 ["Counterflow pipelining: Architectural support for preemption in asynchronous systems using anti-tokens."](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.259.293&rep=rep1&type=pdf)
 Computer-Aided Design, 2006. ICCAD'06. IEEE/ACM International Conference on. IEEE, 2006.
 
+Brej, C. F., and J. D. Garside.
+["Early output logic using anti-tokens."](http://brej.org/papers/iwls_paper.pdf)
+International Workshop on Logic Synthesis. 2003.
+
 Carloni, Luca P., and Alberto L. Sangiovanni-Vincentelli.
 ["Combining Retiming and Recycling to Optimize the Performance of Synchronous Circuits."](http://www1.cs.columbia.edu/~luca/research/rscSBCCI03.pdf)
 SBCCI. Vol. 3. 2003.
