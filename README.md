@@ -22,6 +22,10 @@ Galceran-Oms, Marc, et al.
 ["Automatic microarchitectural pipelining."](http://www.date-conference.org/proceedings/PAPERS/2010/DATE10/PDFFILES/IP3_08.PDF)
 Proceedings of the Conference on Design, Automation and Test in Europe. European Design and Automation Association, 2010.
 
+Bufistov, Dmitry E., et al.
+["Retiming and recycling for elastic systems with early evaluation."](http://www.cs.upc.edu/~jordicf/Research/gavina/BIB/files/rr_early_dac09.pdf)
+Proceedings of the 46th Annual Design Automation Conference. ACM, 2009.
+
 Carmona, Josep, et al.
 ["Elastic circuits."](http://www.eecs.ucf.edu/~mingjie/ECM6308/papers/Elastic%20circuits.pdf)
 Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions on 28.10 (2009): 1437-1455.
