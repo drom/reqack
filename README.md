@@ -42,10 +42,6 @@ Brej, C. F., and J. D. Garside.
 ["Early output logic using anti-tokens."](http://brej.org/papers/iwls_paper.pdf)
 International Workshop on Logic Synthesis. 2003.
 
-Carloni, Luca P., and Alberto L. Sangiovanni-Vincentelli.
-["Combining Retiming and Recycling to Optimize the Performance of Synchronous Circuits."](http://www1.cs.columbia.edu/~luca/research/rscSBCCI03.pdf)
-SBCCI. Vol. 3. 2003.
-
 Carloni, Luca P., Kenneth L. McMillan, and Alberto L. Sangiovanni-Vincentelli.
 ["Theory of latency-insensitive design."](http://webcluster.cs.columbia.edu/~luca/research/lipTransactions.pdf)
 Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions on 20.9 (2001): 1059-1076.
@@ -67,6 +63,10 @@ ACM Journal on Emerging Technologies in Computing Systems (JETC) 7.4 (2011): 18.
 Bufistov, Dmitry E., et al.
 ["Retiming and recycling for elastic systems with early evaluation."](http://www.cs.upc.edu/~jordicf/Research/gavina/BIB/files/rr_early_dac09.pdf)
 Proceedings of the 46th Annual Design Automation Conference. ACM, 2009.
+
+Carloni, Luca P., and Alberto L. Sangiovanni-Vincentelli.
+["Combining Retiming and Recycling to Optimize the Performance of Synchronous Circuits."](http://www1.cs.columbia.edu/~luca/research/rscSBCCI03.pdf)
+SBCCI. Vol. 3. 2003.
 
 ### Performance
 
