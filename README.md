@@ -10,10 +10,6 @@ Chatterjee, Satrajit, Michael Kishinevsky, and Umit Y. Ogras.
 ["xMAS: Quick formal modeling of communication fabrics to enable verification."](https://www.researchgate.net/profile/Satrajit_Chatterjee/publication/224150874_xMAS_Quick_Formal_Modeling_of_Communication_Fabrics_to_Enable_Verification/links/560f30b508aec422d112f3ea.pdf)
 Design & Test of Computers, IEEE 29.3 (2012): 80-88.
 
-Galceran-Oms, Marc, et al.
-["Microarchitectural transformations using elasticity."](http://www.cs.upc.edu/~jordicf/gavina/BIB/files/JECTS2011_MicroarchTransform.pdf)
-ACM Journal on Emerging Technologies in Computing Systems (JETC) 7.4 (2011): 18.
-
 Cortadella, Jordi, Marc Galceran-Oms, and Mike Kishinevsky.
 ["Elastic systems."](http://www.cs.upc.edu/~jordicf/gavina/BIB/files/memocode2010.pdf)
 Formal Methods and Models for Codesign (MEMOCODE), 2010 8th IEEE/ACM International Conference on. IEEE, 2010.
@@ -21,10 +17,6 @@ Formal Methods and Models for Codesign (MEMOCODE), 2010 8th IEEE/ACM Internation
 Galceran-Oms, Marc, et al.
 ["Automatic microarchitectural pipelining."](http://www.date-conference.org/proceedings/PAPERS/2010/DATE10/PDFFILES/IP3_08.PDF)
 Proceedings of the Conference on Design, Automation and Test in Europe. European Design and Automation Association, 2010.
-
-Bufistov, Dmitry E., et al.
-["Retiming and recycling for elastic systems with early evaluation."](http://www.cs.upc.edu/~jordicf/Research/gavina/BIB/files/rr_early_dac09.pdf)
-Proceedings of the 46th Annual Design Automation Conference. ACM, 2009.
 
 Carmona, Josep, et al.
 ["Elastic circuits."](http://www.eecs.ucf.edu/~mingjie/ECM6308/papers/Elastic%20circuits.pdf)
@@ -65,6 +57,16 @@ Parallel Algorithms/Architecture Synthesis, 1995. Proceedings., First Aizu Inter
 Sutherland, Ivan E.
 ["Micropipelines."](http://f-cpu.seul.org/new/micropipelines.pdf)
 Communications of the ACM 32.6 (1989): 720-738.
+
+### Transformations
+
+Galceran-Oms, Marc, et al.
+["Microarchitectural transformations using elasticity."](http://www.cs.upc.edu/~jordicf/gavina/BIB/files/JECTS2011_MicroarchTransform.pdf)
+ACM Journal on Emerging Technologies in Computing Systems (JETC) 7.4 (2011): 18.
+
+Bufistov, Dmitry E., et al.
+["Retiming and recycling for elastic systems with early evaluation."](http://www.cs.upc.edu/~jordicf/Research/gavina/BIB/files/rr_early_dac09.pdf)
+Proceedings of the 46th Annual Design Automation Conference. ACM, 2009.
 
 ### Performance
 
