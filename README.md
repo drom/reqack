@@ -47,6 +47,10 @@ Brej, C. F., and J. D. Garside.
 ["Early output logic using anti-tokens."](http://brej.org/papers/iwls_paper.pdf)
 International Workshop on Logic Synthesis. 2003.
 
+Spars, Jens, and Steve Furber.
+[Principles Asynchronous Circuit Design](http://twanclik.free.fr/electricity/electronic/pdfdone12/Principles%20of%20Asynchronous%20Circuit%20Design%20-%20A%20Systems%20Perspective.pdf).
+Kluwer Academic Publishers, 2002.
+
 Carloni, Luca P., Kenneth L. McMillan, and Alberto L. Sangiovanni-Vincentelli.
 ["Theory of latency-insensitive design."](http://webcluster.cs.columbia.edu/~luca/research/lipTransactions.pdf)
 Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions on 20.9 (2001): 1059-1076.
