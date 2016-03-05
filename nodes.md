@@ -4,11 +4,12 @@
 
 ![reduce](https://rawgit.com/drom/elastic/master/img/reduce.svg)
 
-
 ```js
 i.req = and(t[0].req, t[1].req, ..., t[n].req)
+
 t[0].ack = and(i.ack, and(1,        t[1].req, ..., t[n].req))
 t[1].ack = and(i.ack, and(t[0].req, 1,        ..., t[n].req))
+...
 t[n].ack = and(i.ack, and(t[0].req, t[1].req, ..., 1       ))
 ```
 ![reduce_ctrl](https://rawgit.com/drom/elastic/master/img/reduce_ctrl.svg)
@@ -29,4 +30,50 @@ i[0].req = and(t.req, ~(i[0].ackr))
 i[1].req = and(t.req, ~(i[1].ackr))
 ...
 i[n].req = and(t.req, ~(i[n].ackr))
+```
+
+## stage1
+
+```js
+t.ack = ~t.req | i.ack;
+
+i.dat.next = t.dat;
+i.dat.enable = t.req & i.ack;
+
+i.req.next = (~i.ack | t.req);
+```
+
+## stage2
+
+```js
+fsm(state.next, {
+    S0: { S1: t.req },
+    S1: {
+        S0: (~t.req & i.ack),
+        S2: (t.req & ~i.ack),
+        S3: (t.req & i.ack)
+    },
+    S2: { S3: i.ack },
+    S3: {
+        S0: (~t.req & i.ack),
+        S4: (t.req & ~i.ack),
+        S1: (t.req & i.ack)
+    },
+    S4: { S1: i.ack }
+})
+
+sel = ((state == S3) | (state == S4))
+
+dat0.enable = ((state == S0) | (state == S3)) & t.req
+dat1.enable =  (state == S1)                & t.req
+
+t.ack = ~((state == S2) | (state == S4));
+
+i.req = ~(state == S0);
+
+i.dat = sel ? dat1 : dat0;
+
+dat0.next = t.dat;
+dat1.next = t.dat;
+
 ```
