@@ -3,8 +3,7 @@
 ## join
 
 ![reduce](https://rawgit.com/drom/elastic/master/img/reduce.svg)
-![reduce](img/reduce.svg)
-![reduce](img/join.svg)
+![reduce](https://rawgit.com/drom/elastic/master/img/join.svg)
 
 ```js
 i.req = and(t[0].req, t[1].req, ..., t[n].req)
@@ -19,8 +18,7 @@ t[n].ack = and(i.ack, and(t[0].req, t[1].req, ..., 1       ))
 ## fork
 
 ![fork](https://rawgit.com/drom/elastic/master/img/fork.svg)
-![fork](img/fork.svg)
-![fork](img/eager_fork.svg)
+![fork](https://rawgit.com/drom/elastic/master/img/eager_fork.svg)
 
 ```js
 t.ack = and(i[0].ack, i[1].ack, ..., i[n].ack)
@@ -38,7 +36,7 @@ i[n].req = and(t.req, ~(i[n].ackr))
 
 ## EB1
 
-![EB1](img/eb1.svg)
+![EB1](https://rawgit.com/drom/elastic/master/img/eb1.svg)
 
 ```js
 t.ack = ~t.req | i.ack;
@@ -51,23 +49,23 @@ i.req.next = (~i.ack | t.req);
 
 ## EB2
 
-![EB2](img/eb2.svg)
+![EB2](https://rawgit.com/drom/elastic/master/img/eb2.svg)
 
 ```js
 fsm(state.next, {
-    S0: { S1: t.req },
-    S1: {
+    S0: { S6: t.req },
+    S6: {
         S0: (~t.req & i.ack),
         S2: (t.req & ~i.ack),
-        S3: (t.req & i.ack)
-    },
-    S2: { S3: i.ack },
-    S3: {
-        S0: (~t.req & i.ack),
-        S4: (t.req & ~i.ack),
         S1: (t.req & i.ack)
     },
-    S4: { S1: i.ack }
+    S2: { S1: i.ack },
+    S1: {
+        S0: (~t.req & i.ack),
+        S3: (t.req & ~i.ack),
+        S6: (t.req & i.ack)
+    },
+    S3: { S6: i.ack }
 })
 
 sel = ((state == S3) | (state == S4))
