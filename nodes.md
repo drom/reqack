@@ -13,7 +13,6 @@ t[1].ack = and(i.ack, and(t[0].req, 1,        ..., t[n].req))
 ...
 t[n].ack = and(i.ack, and(t[0].req, t[1].req, ..., 1       ))
 ```
-![reduce_ctrl](https://rawgit.com/drom/elastic/master/img/reduce_ctrl.svg)
 
 ## fork
 
@@ -47,7 +46,7 @@ i.dat.enable = t.req & i.ack;
 i.req.next = (~i.ack | t.req);
 ```
 
-## EB2
+## EB1.5
 
 ![EB2](https://rawgit.com/drom/elastic/master/img/eb2.svg)
 
