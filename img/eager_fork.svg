@@ -902,7 +902,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9581)"
-       d="m 224,868.36216 0,151.99994"
+       d="m 256,868.36218 0,152.00002"
        id="path4184-1-9-5-4-6-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -1169,7 +1169,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 208,868.36218 16,-2e-5"
+       d="m 208,868.36218 48,-2e-5"
        id="path4184-1-9-5-4-8-8-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -1181,19 +1181,19 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 208,980.36218 48,-2e-5"
+       d="m 208,980.36218 16,-2e-5"
        id="path4184-1-9-5-4-8-8-6"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9581-4)"
-       d="m 240,924.36216 0,95.99994"
+       d="m 240,924.36222 0,95.99998"
        id="path4184-1-9-5-4-6-2-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9581-7)"
-       d="m 256,980.36216 0,39.99994"
+       d="m 224,980.36216 0,39.99994"
        id="path4184-1-9-5-4-6-2-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -1253,7 +1253,7 @@
        sodipodi:nodetypes="ccsc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#007f00;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DotM-62)"
-       d="m 16,884.36218 96,-2e-5"
+       d="m 48,884.36216 64,0"
        id="path4184-1-9-5-4-86-0"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -1265,7 +1265,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#007f00;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DotM-4)"
-       d="m 48,996.36218 64,-2e-5"
+       d="m 16,996.36216 96,0"
        id="path4184-1-9-5-4-86-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
