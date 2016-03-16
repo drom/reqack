@@ -14,6 +14,10 @@ Chatterjee, Satrajit, Michael Kishinevsky, and Umit Y. Ogras.
 ["xMAS: Quick formal modeling of communication fabrics to enable verification."](https://www.researchgate.net/profile/Satrajit_Chatterjee/publication/224150874_xMAS_Quick_Formal_Modeling_of_Communication_Fabrics_to_Enable_Verification/links/560f30b508aec422d112f3ea.pdf)
 Design & Test of Computers, IEEE 29.3 (2012): 80-88.
 
+Cortadella, Jordi, et al.
+[Logic synthesis for asynchronous controllers and interfaces](http://www.springer.com/productFlyer_978-3-540-43152-7.pdf?SGWID=0-0-1297-2158934-0).
+Vol. 8. Springer Science & Business Media, 2012.
+
 Cortadella, Jordi, Marc Galceran-Oms, and Mike Kishinevsky.
 ["Elastic systems."](http://www.cs.upc.edu/~jordicf/gavina/BIB/files/memocode2010.pdf)
 Formal Methods and Models for Codesign (MEMOCODE), 2010 8th IEEE/ACM International Conference on. IEEE, 2010.
@@ -93,11 +97,16 @@ Commoner, Frederic, et al.
 ["Marked directed graphs."](http://www.sciencedirect.com/science/article/pii/S0022000071800132/pdf?md5=7fb2ad96e4f09b235e15a6b503dbd380&pid=1-s2.0-S0022000071800132-main.pdf)
 Journal of Computer and System Sciences 5.5 (1971): 511-523.
 
-## Scheduling
+## DataFlow
 
 Lee, Edward Ashford, and David G. Messerschmitt.
 ["Static scheduling of synchronous data flow programs for digital signal processing."](http://www.eecs.ucf.edu/~mingjie/ECM6308/papers/%20Static%20Scheduling%20of%20Synchronous%20Data%20Flow%20Programs%20for%20Digital%20Signal%20Processing.pdf)
 Computers, IEEE Transactions on 100.1 (1987): 24-35.
+
+
+Johnston, Wesley M., J. R. Hanna, and Richard J. Millar.
+["Advances in dataflow programming languages."](http://www.cs.ucf.edu/~dcm/Teaching/COT4810-Spring2011/Literature/DataFlowProgrammingLanguages.pdf)
+ACM Computing Surveys (CSUR) 36.1 (2004): 1-34.
 
 ## Projects
 
