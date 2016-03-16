@@ -10,7 +10,6 @@ Proceedings of the IEEE 103.11 (2015): 2061-2075.
 DOI:
 10.1109/JPROC.2015.2456189
 
-
 Chatterjee, Satrajit, Michael Kishinevsky, and Umit Y. Ogras.
 ["xMAS: Quick formal modeling of communication fabrics to enable verification."](https://www.researchgate.net/profile/Satrajit_Chatterjee/publication/224150874_xMAS_Quick_Formal_Modeling_of_Communication_Fabrics_to_Enable_Verification/links/560f30b508aec422d112f3ea.pdf)
 Design & Test of Computers, IEEE 29.3 (2012): 80-88.
@@ -58,10 +57,17 @@ Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions on 2
 Varshavsky, Victor, Vyacheslav Marakhovsky, and Tam-Anh Chu.
 "Logical timing (global synchronization of asynchronous arrays)."
 Parallel Algorithms/Architecture Synthesis, 1995. Proceedings., First Aizu International Symposium on. IEEE, 1995.
+DOI: 10.1109/AISPAS.1995.401346
 
 Sutherland, Ivan E.
 ["Micropipelines."](http://f-cpu.seul.org/new/micropipelines.pdf)
 Communications of the ACM 32.6 (1989): 720-738.
+
+### Asynchronous
+
+Yakovlev, A. V., et al.
+["Modelling, analysis and synthesis of asynchronous control circuits using Petri nets."](https://www.researchgate.net/profile/Alex_Yakovlev/publication/220686772_Modelling_analysis_and_synthesis_of_asynchronous_control_circuits_using_Petri_nets/links/541030420cf2f2b29a3f1e73.pdf)
+Integration, the VLSI journal 21.3 (1996): 143-170.
 
 ### Transformations
 
@@ -86,6 +92,12 @@ Software Engineering, IEEE Transactions on 5 (1980): 440-449.
 Commoner, Frederic, et al.
 ["Marked directed graphs."](http://www.sciencedirect.com/science/article/pii/S0022000071800132/pdf?md5=7fb2ad96e4f09b235e15a6b503dbd380&pid=1-s2.0-S0022000071800132-main.pdf)
 Journal of Computer and System Sciences 5.5 (1971): 511-523.
+
+## Scheduling
+
+Lee, Edward Ashford, and David G. Messerschmitt.
+["Static scheduling of synchronous data flow programs for digital signal processing."](http://www.eecs.ucf.edu/~mingjie/ECM6308/papers/%20Static%20Scheduling%20of%20Synchronous%20Data%20Flow%20Programs%20for%20Digital%20Signal%20Processing.pdf)
+Computers, IEEE Transactions on 100.1 (1987): 24-35.
 
 ## Projects
 
