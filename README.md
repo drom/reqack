@@ -7,8 +7,7 @@ Elastic circuit tools
 Cortadella, Jordi, et al.
 "RTL Synthesis: From Logic Synthesis to Automatic Pipelining."
 Proceedings of the IEEE 103.11 (2015): 2061-2075.
-DOI:
-10.1109/JPROC.2015.2456189
+DOI: 10.1109/JPROC.2015.2456189
 
 Chatterjee, Satrajit, Michael Kishinevsky, and Umit Y. Ogras.
 ["xMAS: Quick formal modeling of communication fabrics to enable verification."](https://www.researchgate.net/profile/Satrajit_Chatterjee/publication/224150874_xMAS_Quick_Formal_Modeling_of_Communication_Fabrics_to_Enable_Verification/links/560f30b508aec422d112f3ea.pdf)
