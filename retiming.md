@@ -1,5 +1,7 @@
 # Retiming
 
+Original graph
+
 ```dot
   <- 7 <- 6 <- 5 <-
 |    ^    ^    ^    ^
