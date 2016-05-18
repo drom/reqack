@@ -107,6 +107,11 @@ Johnston, Wesley M., J. R. Hanna, and Richard J. Millar.
 ["Advances in dataflow programming languages."](http://www.cs.ucf.edu/~dcm/Teaching/COT4810-Spring2011/Literature/DataFlowProgrammingLanguages.pdf)
 ACM Computing Surveys (CSUR) 36.1 (2004): 1-34.
 
+## DAG
+
+Yu, Cunxi, et al.
+["DAG-Aware Logic Synthesis of Datapaths."](http://www.ecs.umass.edu/ece/labs/vlsicad/papers/dac-2016-cunxi-ibm-muxmove.pdf)
+
 ## Projects
 
 https://github.com/google/autopiper
