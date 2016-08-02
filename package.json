@@ -1,0 +1,37 @@
+{
+  "name": "elastic",
+  "version": "0.0.1",
+  "description": "elastic logic tools",
+  "main": "lib/",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint lib/*.js && istanbul cover _mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/elastic.git"
+  },
+  "keywords": [
+    "elastic"
+  ],
+  "author": "Aliaksei Chapyzhenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/elastic/issues"
+  },
+  "homepage": "https://github.com/drom/elastic#readme",
+  "dependencies": {
+    "dagre": "^0.7.4",
+    "digraph": "^0.1.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.4.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "onml": "^0.3.1"
+  }
+}
