@@ -108,6 +108,10 @@ ACM Computing Surveys (CSUR) 36.1 (2004): 1-34.
 Yu, Cunxi, et al.
 ["DAG-Aware Logic Synthesis of Datapaths."](http://www.ecs.umass.edu/ece/labs/vlsicad/papers/dac-2016-cunxi-ibm-muxmove.pdf)
 
+Mohanty, Saraju P., and N. Ranganathan.
+["Energy efficient scheduling for datapath synthesis."](http://www.academia.edu/download/44081902/Energy_Efficient_Scheduling_for_Datapath20160324-22777-1gq95vf.pdf)
+VLSI Design, 2003. Proceedings. 16th International Conference on. IEEE, 2003.
+
 ## Projects
 
 https://github.com/google/autopiper
