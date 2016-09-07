@@ -98,10 +98,13 @@ Lee, Edward Ashford, and David G. Messerschmitt.
 ["Static scheduling of synchronous data flow programs for digital signal processing."](http://www.eecs.ucf.edu/~mingjie/ECM6308/papers/%20Static%20Scheduling%20of%20Synchronous%20Data%20Flow%20Programs%20for%20Digital%20Signal%20Processing.pdf)
 Computers, IEEE Transactions on 100.1 (1987): 24-35.
 
-
 Johnston, Wesley M., J. R. Hanna, and Richard J. Millar.
 ["Advances in dataflow programming languages."](http://www.cs.ucf.edu/~dcm/Teaching/COT4810-Spring2011/Literature/DataFlowProgrammingLanguages.pdf)
 ACM Computing Surveys (CSUR) 36.1 (2004): 1-34.
+
+Benini, Luca, et al.
+["Telescopic Units: A New Paradigm for Performance Optimization of VLSI Designs."](http://si2.epfl.ch/~demichel/publications/archive/1998/CADICSvol17iss3Mar98pg220.pdf)
+IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS 17.3 (1998).
 
 ## DAG
 
