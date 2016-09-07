@@ -1,7 +1,7 @@
 ## References
 
 Cortadella, Jordi, et al.
-"RTL Synthesis: From Logic Synthesis to Automatic Pipelining."
+["RTL Synthesis: From Logic Synthesis to Automatic Pipelining."](http://upcommons.upc.edu/bitstream/handle/2117/82027/RTLsynthesis.pdf)
 Proceedings of the IEEE 103.11 (2015): 2061-2075.
 DOI: 10.1109/JPROC.2015.2456189
 
