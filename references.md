@@ -84,6 +84,10 @@ SBCCI. Vol. 3. 2003.
 
 ### Performance
 
+Júlvez, Jorge, Jordi Cortadella, and Michael Kishinevsky.
+["On the performance evaluation of multi-guarded marked graphs with single-server semantics."](http://webdiis.unizar.es/~julvez/pub/09deds.pdf)
+Discrete Event Dynamic Systems 20.3 (2010): 377-407.
+
 Ramamoorthy, C. V., and Gary S. Ho.
 ["Performance evaluation of asynchronous concurrent systems using Petri nets."](http://www.computer.org/csdl/trans/ts/1980/05/01702760.pdf)
 Software Engineering, IEEE Transactions on 5 (1980): 440-449.
