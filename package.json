@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "eslint lib/*.js && istanbul cover _mocha test"
+    "test": "eslint lib/*.js && mocha test",
+    "retest": "eslint lib/*.js && istanbul cover _mocha test"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^2.4.0",
+    "flow-bin": "^0.33.0",
     "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
     "onml": "^0.3.1"
