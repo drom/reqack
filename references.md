@@ -1,5 +1,10 @@
 ## References
 
+Javier de San Pedro, Thomas Bourgeat, Jordi Cortadella
+[Specification mining for asynchronous controllers](http://www.cs.upc.edu/~jspedro/articles/async2016.pdf)
+Asynchronous Circuits and Systems (ASYNC), 2016 22nd IEEE International Symposium on 107-114
+DOI: 10.1109/ASYNC.2016.10
+
 Cortadella, Jordi, et al.
 ["RTL Synthesis: From Logic Synthesis to Automatic Pipelining."](http://upcommons.upc.edu/bitstream/handle/2117/82027/RTLsynthesis.pdf)
 Proceedings of the IEEE 103.11 (2015): 2061-2075.
