@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/drom/elastic.svg?branch=master)](https://travis-ci.org/drom/elastic)
+
 # elastic
 
 Elastic circuit tools
