@@ -1,7 +1,7 @@
 'use strict';
 
-var lib = require('../lib'),
-    onml = require('onml'),
+var onml = require('onml'),
+    // lib = require('../lib'),
     digraph = require('digraph'),
     expect = require('chai').expect;
 
@@ -18,7 +18,7 @@ describe('test', function () {
         g.add.edge(c, a);
         g.add.edge(b, d);
 
-        var res = lib.export.svg(g);
+        // var res = lib.export.svg(g);
         // console.log(onml.s(res));
         done();
     });
