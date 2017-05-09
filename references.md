@@ -73,6 +73,9 @@ Yakovlev, A. V., et al.
 ["Modelling, analysis and synthesis of asynchronous control circuits using Petri nets."](https://www.researchgate.net/profile/Alex_Yakovlev/publication/220686772_Modelling_analysis_and_synthesis_of_asynchronous_control_circuits_using_Petri_nets/links/541030420cf2f2b29a3f1e73.pdf)
 Integration, the VLSI journal 21.3 (1996): 143-170.
 
+Cortadella, Jordi and Kishinevsky, Michael and Kondratyev, Alex and Lavagno, Luciano and Yakovlev, Alex;
+Logic synthesis for asynchronous controllers and interfaces;2012
+
 ### Transformations
 
 Galceran-Oms, Marc, et al.
