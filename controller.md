@@ -82,7 +82,7 @@ t.ack = ~t.req | i.ack;
 i.dat.next = t.dat;
 i.dat.enable = t.req & i.ack;
 
-i.req.next = (~i.ack & t.req);
+i.req.next = (~i.ack | t.req);
 ```
 
 ## EB:1.5
