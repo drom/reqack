@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "eslint lib/*.js && mocha test",
-    "retest": "eslint lib/*.js && istanbul cover _mocha test"
+    "retest": "eslint lib/*.js && nyc mocha test",
+    "redot": "for i in *.dot; do dot -Tsvg \"$i\" > \"$i\".svg; done"
   },
   "repository": {
     "type": "git",
@@ -25,15 +26,11 @@
   },
   "homepage": "https://github.com/drom/elastic#readme",
   "dependencies": {
-    "dagre": "^0.7.4",
-    "digraph": "^0.1.4"
+    "digraph": "1.3.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^2.4.0",
-    "flow-bin": "^0.33.0",
-    "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
-    "onml": "^0.3.1"
+    "eslint": "^4.7.2",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1"
   }
 }
