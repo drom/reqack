@@ -29,8 +29,12 @@
     "digraph": "1.3.0"
   },
   "devDependencies": {
-    "eslint": "^4.7.2",
+    "@drom/eslint-config": "^0.1.1",
+    "eslint": "^4.8.0",
     "mocha": "^3.5.3",
     "nyc": "^11.2.1"
+  },
+  "eslintConfig": {
+    "extends": "@drom"
   }
 }
