@@ -35,6 +35,9 @@
     "nyc": "^11.2.1"
   },
   "eslintConfig": {
-    "extends": "@drom"
+    "extends": "@drom",
+    "env": {
+      "es6": true
+    }
   }
 }
