@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/drom/elastic#readme",
   "dependencies": {
-    "digraph": "1.3.0"
+    "digraph": "^1.4.0"
   },
   "devDependencies": {
     "@drom/eslint-config": "^0.7.0",
