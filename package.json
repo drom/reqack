@@ -30,7 +30,11 @@
   },
   "devDependencies": {
     "@drom/eslint-config": "^0.7.0",
+    "chai": "^4.1.2",
+    "escodegen": "^1.9.0",
     "eslint": "^4.8.0",
+    "esprima": "^4.0.0",
+    "estraverse": "^4.2.0",
     "mocha": "^3.5.3",
     "nyc": "^11.2.1"
   },
