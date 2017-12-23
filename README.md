@@ -4,12 +4,12 @@
 
 Elastic circuit tools
 
-[construct](construct.md) elastic circuit.
+[construct](docs/construct.md) elastic circuit.
 
-Perform elastic [transformations](transformations.md).
+Perform elastic [transformations](docs/transformations.md).
 
-[retiming](retiming.md) example.
+[retiming](docs/retiming.md) example.
 
-Tools will synthesize appropriate elastic [controller](controller.md).
+Tools will synthesize appropriate elastic [controller](docs/controller.md).
 
-[references](references.md)
+[references](docs/references.md)
