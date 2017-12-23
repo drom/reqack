@@ -3,27 +3,27 @@
 ### Construct circuit
 
 ```js
-var A = node();
-var B = node();
-var C = node();
-var D = node();
-var E = node();
-var F = node();
-var G = node();
-var H = node();
+const a = G('a');
+const b = G('b');
+const c = G('c');
+const d = G('d');
+const e = G('e');
+const f = G('f');
+const g = G('g');
+const h = G('h');
 
-stage(A.o, B.i)
-stage(B.o[0], C.i)
-stage(C.o[0], D.i)
-stage(D.o[0], E.i)
+a({capacity: 1})(b);
+b({capacity: 1})(c);
+c({capacity: 1})(d);
+d({capacity: 1})(e);
 
-link(E.o, F.i[0])
-link(D.o[1], F.i[1])
-link(F.o, G.i[0])
-link(C.o[1], G.i[1])
-link(G.o, H.i[0])
-link(B.o[1], H.i[1])
-link(H.o, A.i)
+b({})(h);
+c({})(g);
+d({})(f);
+e({})(f);
+f({})(g);
+g({})(h);
+h({})(a);
 ```
 <!-- ![](img/ret0.svg) -->
 ![](https://rawgit.com/drom/elastic/master/img/ret0.svg)

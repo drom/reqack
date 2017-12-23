@@ -45,4 +45,35 @@ describe('basic', () => {
             fs.writeFile('radix2.v', fhyperV(g), done);
         });
     });
+
+    it('retiming', done => {
+        const G = fhyper();
+
+        // construct circuit
+        const a = G('a');
+        const b = G('b');
+        const c = G('c');
+        const d = G('d');
+        const e = G('e');
+        const f = G('f');
+        const g = G('g');
+        const h = G('h');
+
+        a({capacity: 1})(b);
+        b({capacity: 1})(c);
+        c({capacity: 1})(d);
+        d({capacity: 1})(e);
+
+        b({})(h);
+        c({})(g);
+        d({})(f);
+        e({})(f);
+        f({})(g);
+        g({})(h);
+        h({})(a);
+
+        fs.writeFile('retiming.dot', fhyperDot(G), () => {
+            fs.writeFile('retiming.v', fhyperV(G), done);
+        });
+    });
 });
