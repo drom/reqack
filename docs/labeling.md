@@ -1,9 +1,15 @@
-# Node and Edge Labeling
+# Grapth, Node, Edge Labeling
+
+## Graph
+fhyper(label)
+* `undefined`, `null` -> `{}`
+* `String` -> `{label: <String>}`
+
 ## Nodes
 node (label)
-* undefined or null -> XOR
-* String -> Operator
-* Object
+* `undefined`, `null` -> XOR
+* `String` -> Operator
+* `Object`
     * Name: String
     * ...
     * latency: Number (Int)
@@ -12,9 +18,9 @@ node (label)
 
 ## Edges
 edge (label)
-* undefined or null -> wire (sizable)
-* Number (Int) -> width
-* Object
+* `undefined`, `null` -> wire (sizable)
+* `Number` (Int) -> width
+* `Object`
     * name: string -> .toString()
     * capacity: Number (Int)
     * latency: Number (Int)
