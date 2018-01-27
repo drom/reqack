@@ -11,8 +11,8 @@
 
 ## Nodes
 `node(label)`
-* `undefined`, `null` -> XOR
-* `String` -> Operator
+* `undefined`, `null` -> `{operator: 'XOR'}`
+* `String` -> `{operator: <String>}`
 * `Number`
 * `Object`
     * name: `String`
@@ -26,7 +26,7 @@
 `edge(label)`
 * `undefined`, `null` -> wire (sizable)
 * `String`
-* `Number` (Int) -> width
+* `Number` -> `{width: <Number>}`
 * `Object`
     * name: `String` -> .toString()
     * capacity: `Number` (Int)
