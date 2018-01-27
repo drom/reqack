@@ -1,7 +1,7 @@
 # Grapth, Node, Edge Labeling
 
 ## Graph
-fhyper(label)
+`fhyper(label)`
 * `undefined`, `null` -> `{}`
 * `String` -> `{label: <String>}`
 * `Number`
@@ -10,7 +10,7 @@ fhyper(label)
 * `Array`
 
 ## Nodes
-node (label)
+`node(label)`
 * `undefined`, `null` -> XOR
 * `String` -> Operator
 * `Number`
@@ -22,8 +22,8 @@ node (label)
 * `Function`
 * `Array`
 
-## Edges
-edge (label)
+## Edge
+`edge(label)`
 * `undefined`, `null` -> wire (sizable)
 * `String`
 * `Number` (Int) -> width
