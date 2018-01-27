@@ -4,25 +4,28 @@
 fhyper(label)
 * `undefined`, `null` -> `{}`
 * `String` -> `{label: <String>}`
+* `Object`
+* `Function`
 
 ## Nodes
 node (label)
 * `undefined`, `null` -> XOR
 * `String` -> Operator
 * `Object`
-    * Name: String
+    * name: `String`
     * ...
-    * latency: Number (Int)
+    * latency: `Number` (Int)
     * function?
-* Function
+* `Function`
 
 ## Edges
 edge (label)
 * `undefined`, `null` -> wire (sizable)
 * `Number` (Int) -> width
 * `Object`
-    * name: string -> .toString()
-    * capacity: Number (Int)
-    * latency: Number (Int)
-    * eager: bool
+    * name: `String` -> .toString()
+    * capacity: `Number` (Int)
+    * latency: `Number` (Int)
+    * eager: `bool`
     * width: (undefined/Number)
+* `Function`
