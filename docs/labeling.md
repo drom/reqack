@@ -6,6 +6,7 @@
 * `String` -> `{label: <String>}`
 * `Number`
 * `Object`
+   * label: `String`
 * `Function`
 * `Array`
 
