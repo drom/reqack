@@ -1,10 +1,10 @@
 'use strict';
 
-const fhyper = require('../lib/fhyper')
-    , fs = require('fs')
-    , fhyperDot = require('../lib/fhyper-dot')
-    , fhyperV = require('../lib/fhyper-verilog')
-    ;
+const fs = require('fs-extra');
+const path = require('path');
+const fhyper = require('../lib/fhyper');
+const fhyperDot = require('../lib/fhyper-dot');
+const fhyperV = require('../lib/fhyper-verilog');
 
 describe('basic', () => {
 
@@ -21,8 +21,8 @@ describe('basic', () => {
 
         g.edges.forEach(e => e.label = {width: 8});
 
-        fs.writeFile('add2.dot', fhyperDot(g), () => {
-            fs.writeFile('add2.v', fhyperV(g), done);
+        fs.outputFile(path.resolve('build', 'add2.dot'), fhyperDot(g), () => {
+            fs.outputFile(path.resolve('build', 'add2.v'), fhyperV(g), done);
         });
     });
 
@@ -41,8 +41,8 @@ describe('basic', () => {
         // set edge width
         g.edges.forEach(e => e.label.width = 16);
 
-        fs.writeFile('radix2.dot', fhyperDot(g), () => {
-            fs.writeFile('radix2.v', fhyperV(g), done);
+        fs.outputFile(path.resolve('build', 'radix2.dot'), fhyperDot(g), () => {
+            fs.outputFile(path.resolve('build', 'radix2.v'), fhyperV(g), done);
         });
     });
 
@@ -72,8 +72,8 @@ describe('basic', () => {
         g({})(h);
         h({})(a);
 
-        fs.writeFile('retiming.dot', fhyperDot(G), () => {
-            fs.writeFile('retiming.v', fhyperV(G), done);
+        fs.outputFile(path.resolve('build', 'retiming.dot'), fhyperDot(G), () => {
+            fs.outputFile(path.resolve('build', 'retiming.v'), fhyperV(G), done);
         });
     });
 });
