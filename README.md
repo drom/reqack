@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/drom/elastic.svg?branch=master)](https://travis-ci.org/drom/elastic)
+[![Travis Status](https://travis-ci.org/drom/elastic.svg?branch=master)](https://travis-ci.org/drom/elastic)
+[![NPM version](https://img.shields.io/npm/v/elastic-circuit.svg)](https://www.npmjs.org/package/elastic-circuit)
 
 # elastic
 
