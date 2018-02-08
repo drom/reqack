@@ -1,6 +1,6 @@
 'use strict';
 
-const fhyper = require('digraph/fhyper')
+const fhyper = require('../lib/fhyper')
     , fs = require('fs')
     , fhyperDot = require('../lib/fhyper-dot')
     , fhyperV = require('../lib/fhyper-verilog')

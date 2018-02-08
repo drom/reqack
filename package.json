@@ -25,9 +25,7 @@
     "url": "https://github.com/drom/elastic/issues"
   },
   "homepage": "https://github.com/drom/elastic#readme",
-  "dependencies": {
-    "digraph": "^1.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@drom/eslint-config": "^0.7.0",
     "chai": "^4.1.2",
