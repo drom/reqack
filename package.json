@@ -10,7 +10,8 @@
   "scripts": {
     "test": "eslint lib/*.js test/*.js && mocha test",
     "retest": "eslint lib/*.js && nyc mocha test",
-    "redot": "for i in *.dot; do dot -Tsvg \"$i\" > \"$i\".svg; done"
+    "redot": "for i in build/*.dot; do dot -Tsvg \"$i\" > \"$i\".svg; done",
+    "clean": "rm build/*"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "eslint": "^4.8.0",
     "esprima": "^4.0.0",
     "estraverse": "^4.2.0",
+    "fs-extra": "^5.0.0",
     "mocha": "^3.5.3",
     "nyc": "^11.2.1"
   },
