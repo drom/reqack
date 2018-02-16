@@ -15,6 +15,6 @@ Standard library of elastic modules
   * eb2b_ctrl
 
 # Full module
-* eb1
-* eb2a
-* eb2b
+  * eb1
+  * eb2a
+  * eb2b
