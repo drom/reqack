@@ -21,23 +21,15 @@ eb2a_data #(
 ) udata (
     .t_0_data(t_0_data),
     .i_0_data(i_0_data),
-    .en0(en0),
-    .en1(en1),
-    .sel(sel),
-    .clk(clk),
-    .reset_n(reset_n)
+    .en0(en0), .en1(en1), .sel(sel),
+    .clk(clk), .reset_n(reset_n)
 );
 
 eb2a_ctrl uctrl (
-    .t_0_valid(t_0_valid),
-    .t_0_ready(t_0_ready),
-    .i_0_valid(i_0_valid),
-    .i_0_ready(i_0_ready),
-    .en0(en0),
-    .en1(en1),
-    .sel(sel),
-    .clk(clk),
-    .reset_n(reset_n)
+    .t_0_valid(t_0_valid), .t_0_ready(t_0_ready),
+    .i_0_valid(i_0_valid), .i_0_ready(i_0_ready),
+    .en0(en0), .en1(en1), .sel(sel),
+    .clk(clk), .reset_n(reset_n)
 );
 
 endmodule

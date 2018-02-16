@@ -22,18 +22,14 @@ eb1_data #(
     .t_0_data(t_0_data),
     .i_0_data(i_0_data),
     .en(en),
-    .clk(clk),
-    .reset_n(reset_n)
+    .clk(clk), .reset_n(reset_n)
 );
 
 eb1_ctrl uctrl (
-    .t_0_valid(t_0_valid),
-    .t_0_ready(t_0_ready),
-    .i_0_valid(i_0_valid),
-    .i_0_ready(i_0_ready),
+    .t_0_valid(t_0_valid), .t_0_ready(t_0_ready),
+    .i_0_valid(i_0_valid), .i_0_ready(i_0_ready),
     .en(en),
-    .clk(clk),
-    .reset_n(reset_n)
+    .clk(clk), .reset_n(reset_n)
 );
 
 endmodule

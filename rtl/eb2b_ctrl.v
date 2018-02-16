@@ -13,4 +13,6 @@ module eb2b_ctrl #(
     input        i_0_ready
 );
 
+// TODO controller
+
 endmodule
