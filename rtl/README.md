@@ -1,7 +1,8 @@
 Standard library of elastic modules
 
-## Elastic buffer data path
+# Data path
 
+## Elastic buffer
   * eb1
   * eb2a
   * eb2b
