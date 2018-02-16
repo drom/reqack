@@ -1,4 +1,4 @@
-module eb1 #(
+module eb1_data #(
     parameter T_0_WIDTH = 8,
     parameter I_0_WIDTH = 8
 ) (

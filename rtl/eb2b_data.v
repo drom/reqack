@@ -1,4 +1,4 @@
-module eb2b #(
+module eb2b_data #(
     parameter T_0_WIDTH = 8,
     parameter I_0_WIDTH = 8
 ) (
