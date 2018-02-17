@@ -1,3 +1,4 @@
+// edge ${id} EB1
 logic en_${id};
 
 assign en_${id} = ${t_0_valid} & ${i_0_ready};

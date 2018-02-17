@@ -1,3 +1,4 @@
+// edge ${id} EB2a
 logic en0_${id}, en1_${id}, sel_${id};
 
 eb2a_ctrl uctrl_${id} (

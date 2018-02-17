@@ -1,3 +1,4 @@
+// edge ${id} EB2b
 logic en0_${id}, en1_${id}, sel_${id};
 
 eb2b_ctrl uctrl_${id} (
