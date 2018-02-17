@@ -8,7 +8,6 @@ module eb1_data #(
     input clk, reset_n
 );
 
-always @(posedge clk)
-    if (en) i_0_data <= t_0_data;
+always @(posedge clk) if (en) i_0_data <= t_0_data;
 
 endmodule

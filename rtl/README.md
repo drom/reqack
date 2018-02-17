@@ -1,20 +1,11 @@
 Standard library of elastic modules
 
-# Data path
-
 ## Elastic buffer
-  * eb1_data
-  * eb2a_data
-  * eb2b_data
 
-# Controller
-
-## Elastic buffer
-  * eb1_ctrl
-  * eb2a_ctrl
-  * eb2b_ctrl
-
-# Full module
-  * eb1
-  * eb2a
-  * eb2b
+| type | full | data | ctrl | data.macro | ctrl.macro |
+|:-----|:----:|:----:|:----:|:----------:|:----------:|
+| 0    |  v   |      |      |     v      |     v      |
+| 1    |  v   |  v   |  v   |     v      |     v      |
+| 2a   |  v   |  v   |  v   |     v      |     v      |
+| 2b   |  v   |  v   | bbx  |     v      |    bbx     |
+| n    | bbx  | bbx  | bbx  |    bbx     |    bbx     |
