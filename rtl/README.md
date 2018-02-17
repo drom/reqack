@@ -8,4 +8,4 @@ Standard library of elastic modules
 | 1    |  v   |  v   |  v   |     v      |     v      |
 | 2a   |  v   |  v   |  v   |     v      |     v      |
 | 2b   |  v   |  v   | bbx  |     v      |    bbx     |
-| n    | bbx  | bbx  | bbx  |    bbx     |    bbx     |
+| n    | bbx  | tbd  | tbd  |    tbd     |    tbd     |
