@@ -18,6 +18,17 @@ describe('basic', () => {
         dump(g, 'add2', done);
     });
 
+    it('custom', done => {
+        const g = fhyper();
+        const fn = g('custom');
+        g()()(fn);
+        g()({capacity: 1})(fn);
+        g()()(fn);
+        fn({capacity: 1})(g());
+        g.edges.forEach(perEdgeSetWidth(12));
+        dump(g, 'custom', done);
+    });
+
     it('radix2', done => {
         const g = fhyper('datapath');
         // construct functional nodes
@@ -55,6 +66,51 @@ describe('basic', () => {
         y(rs36)(g());
 
         dump(g, 'cmul', done);
+    });
+
+    it('cmul_concat', done => {
+        // x = (a * c - b * d); y = (a * d + b * c);
+        const s18  = {width: 18};
+        // const rs18 = {capacity: 1, width: 18};
+        const s36  = {width: 36};
+        const rs36 = {width: 36, capacity: 1};
+        const rs72 = {width: 72, capacity: 1};
+        const r2s72 = {width: 72, capacity: 2};
+        const g = fhyper();
+
+        const ac = g('concat'), bd = g('concat'), ad = g('concat'), bc = g('concat');
+
+        g()(s18)(ac)(ad);
+        g()(s18)(bd)(bc);
+        g()(s18)(ac)(bc);
+        g()(s18)(bd)(ad);
+
+        const ac_ = g('*'), bd_ = g('*'), ad_ = g('*'), bc_ = g('*');
+
+        ac(rs36)(ac_);
+        bd(rs36)(bd_);
+        ad(rs36)(ad_);
+        bc(rs36)(bc_);
+
+        const x = g('concat'), y = g('concat');
+
+        ac_(s36)(x);
+        bd_(s36)(x);
+        ad_(s36)(y);
+        bc_(s36)(y);
+
+        const x_ = g('-'), y_ = g('+');
+
+        x(rs72)(x_);
+        y(rs72)(y_);
+
+        const xy = g('concat');
+        x_(rs36)(xy);
+        y_(rs36)(xy);
+
+        xy(r2s72)(g());
+
+        dump(g, 'cmul_concat', done);
     });
 
     it('retiming', done => {
