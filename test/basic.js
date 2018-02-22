@@ -8,6 +8,12 @@ const perEdgeSetWidth = w => e =>
 
 describe('basic', () => {
 
+    it('wire', done => {
+        const g = fhyper();
+        g()()(g());
+        dump(g, 'wire', done);
+    });
+
     it('add2', done => {
         const g = fhyper();
         const i0 = g(), i1 = g(), o = g(), add2 = g('add');
