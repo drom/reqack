@@ -1,16 +1,30 @@
 [![Travis Status](https://travis-ci.org/drom/elastic.svg?branch=master)](https://travis-ci.org/drom/elastic)
 [![NPM version](https://img.shields.io/npm/v/elastic-circuit.svg)](https://www.npmjs.org/package/elastic-circuit)
 
-# elastic
-
 Elastic circuit tools
 
-[construct](docs/construct.md) elastic circuit.
+## Use
 
-Perform elastic [transformations](docs/transformations.md).
+### Node.js
 
-[retiming](docs/retiming.md) example.
+```sh
+npm i elastic-circuit --save
+```
 
-Tools will synthesize appropriate elastic [controller](docs/controller.md).
+```js
+const fhyper = require('elastic-circuit/lib/fhyper');
+```
 
-[references](docs/references.md)
+## API
+
+### fhyper
+
+## Testing
+
+```sh
+npm test
+```
+
+## License
+
+MIT [LICENSE](LICENSE)
