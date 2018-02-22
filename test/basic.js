@@ -10,8 +10,14 @@ describe('basic', () => {
 
     it('wire', done => {
         const g = fhyper();
-        g()()(g());
+        g()({width: 1})(g());
         dump(g, 'wire', done);
+    });
+
+    it('eb1', done => {
+        const g = fhyper();
+        g()({width: 4, capacity: 1})(g());
+        dump(g, 'eb1', done);
     });
 
     it('add2', done => {

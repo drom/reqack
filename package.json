@@ -13,7 +13,8 @@
     "templer": "./bin/templer.js --source rtl/ --output templates.js",
     "retest": "eslint lib/*.js && npm run templer && nyc mocha test",
     "redot": "for i in build/*.dot; do dot -Tsvg \"$i\" > \"$i\".svg; done",
-    "clean": "rm build/*.dot rm build/*.svg build/*.v"
+    "clean": "rm build/*.dot rm build/*.svg build/*.v",
+    "vlint": "verilator --lint-only build/*.v"
   },
   "repository": {
     "type": "git",
