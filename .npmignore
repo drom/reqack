@@ -1,0 +1,11 @@
+.nyc_output
+coverage
+node_modules
+package-lock.json
+build
+templates.js
+bak/
+docs/
+img/
+src/
+test/
