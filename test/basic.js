@@ -1,6 +1,7 @@
 'use strict';
 
 const fhyper = require('../lib/fhyper');
+const macroVerilog = require('../lib/macro-verilog');
 const dump = require('../lib/dump');
 
 const perEdgeSetWidth = w => e =>
@@ -17,7 +18,7 @@ describe('basic', () => {
     it('eb1', done => {
         const g = fhyper();
         g()({width: 4, capacity: 1})(g());
-        dump(g, 'eb1', done);
+        dump(g, 'eb1', {}, done);
     });
 
     it('add2', done => {
@@ -27,10 +28,19 @@ describe('basic', () => {
         i1()(add2);
         add2()(o);
         g.edges.forEach(perEdgeSetWidth(8));
-        dump(g, 'add2', done);
+        dump(g, 'add2', {}, done);
     });
 
     it('custom', done => {
+
+        const macros = {
+            custom: {
+                ctrl: macroVerilog.join.ctrl,
+                data: p => `assign ${p.i.data} = ${ p.targets.join(' ^ ') };`,
+                ctrl2data: () => ({})
+            }
+        };
+
         const g = fhyper();
         const fn = g('custom');
         g()()(fn);
@@ -38,7 +48,7 @@ describe('basic', () => {
         g()()(fn);
         fn({capacity: 1})(g());
         g.edges.forEach(perEdgeSetWidth(12));
-        dump(g, 'custom', done);
+        dump(g, 'custom', macros, done);
     });
 
     it('radix2', done => {
@@ -53,7 +63,7 @@ describe('basic', () => {
         sub({capacity: 1})(g());
         g.edges.forEach(perEdgeSetWidth(16));
 
-        dump(g, 'radix2', done);
+        dump(g, 'radix2', {}, done);
     });
 
     it('cmul', done => {
@@ -62,13 +72,13 @@ describe('basic', () => {
         const rs36 = {capacity: 1, width: 36};
         const g = fhyper();
 
-        const ac = g('*'), bd = g('*'), ad = g('*'), bc = g('*');
+        const ac = g('mul'), bd = g('mul'), ad = g('mul'), bc = g('mul');
         g()(rs18)(ac)(ad);
         g()(rs18)(bd)(bc);
         g()(rs18)(ac)(bc);
         g()(rs18)(bd)(ad);
 
-        const x = g('-'), y = g('+');
+        const x = g('sub'), y = g('add');
         ac(rs36)(x);
         bd(rs36)(x);
         ad(rs36)(y);
@@ -77,7 +87,7 @@ describe('basic', () => {
         x(rs36)(g());
         y(rs36)(g());
 
-        dump(g, 'cmul', done);
+        dump(g, 'cmul', {}, done);
     });
 
     it('cmul_concat', done => {
@@ -97,7 +107,7 @@ describe('basic', () => {
         g()(s18)(ac)(bc);
         g()(s18)(bd)(ad);
 
-        const ac_ = g('*'), bd_ = g('*'), ad_ = g('*'), bc_ = g('*');
+        const ac_ = g('mul'), bd_ = g('mul'), ad_ = g('mul'), bc_ = g('mul');
 
         ac(rs36)(ac_);
         bd(rs36)(bd_);
@@ -111,7 +121,7 @@ describe('basic', () => {
         ad_(s36)(y);
         bc_(s36)(y);
 
-        const x_ = g('-'), y_ = g('+');
+        const x_ = g('sub'), y_ = g('add');
 
         x(rs72)(x_);
         y(rs72)(y_);
@@ -122,7 +132,7 @@ describe('basic', () => {
 
         xy(r2s72)(g());
 
-        dump(g, 'cmul_concat', done);
+        dump(g, 'cmul_concat', {}, done);
     });
 
     it('retiming', done => {
@@ -153,6 +163,6 @@ describe('basic', () => {
 
         gg.edges.forEach(perEdgeSetWidth(16));
 
-        dump(gg, 'retiming', done);
+        dump(gg, 'retiming', {}, done);
     });
 });
