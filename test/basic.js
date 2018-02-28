@@ -1,7 +1,6 @@
 'use strict';
 
 const fhyper = require('../lib/fhyper');
-const macroVerilog = require('../lib/macro-verilog');
 const dump = require('../lib/dump');
 
 const perEdgeSetWidth = w => e =>
@@ -12,7 +11,7 @@ describe('basic', () => {
     it('wire', done => {
         const g = fhyper();
         g()({width: 1})(g());
-        dump(g, 'wire', done);
+        dump(g, 'wire', {}, done);
     });
 
     it('eb1', done => {
@@ -35,9 +34,8 @@ describe('basic', () => {
 
         const macros = {
             custom: {
-                ctrl: macroVerilog.join.ctrl,
-                data: p => `assign ${p.i.data} = ${ p.targets.join(' ^ ') };`,
-                ctrl2data: () => ({})
+                data: p => p.i.map(lhs =>
+                    `assign ${lhs.name} = ${ p.t.map(e => e.name).join(' ^ ') };`)
             }
         };
 

@@ -18,7 +18,7 @@ describe('hls', () => {
         const g = resEdge.state.root;
         // expect(g).to.deep.equal(['_sub', ['_add', 'a', 'b'], ['_add', 12, 'c']]);
         // console.log(fhyperDot(g));
-        dump(g, 'hls1', done);
+        dump(g, 'hls1', {}, done);
     });
 
     // it('hls-cmul', done => {

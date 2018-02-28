@@ -8,12 +8,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "eslint lib/*.js test/*.js && npm run templer && mocha test",
-    "prepublish": "npm run templer",
+    "test": "eslint lib/*.js test/*.js && mocha test",
     "templer": "./bin/templer.js --source rtl/ --output templates.js",
     "retest": "eslint lib/*.js && npm run templer && nyc mocha test",
     "redot": "for i in build/*.dot; do dot -Tsvg \"$i\" > \"$i\".svg; done",
-    "clean": "rm build/*.dot rm build/*.svg build/*.v",
+    "clean": "rm -rf build",
     "vlint": "verilator --lint-only build/*.v"
   },
   "repository": {
