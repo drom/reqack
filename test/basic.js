@@ -30,6 +30,21 @@ describe('basic', () => {
         dump(g, 'add2', {}, done);
     });
 
+    it('headtail', done => {
+        const g = fhyper();
+        const f1 = g('f1');
+        const f2 = g('f2');
+        const u8 = {width: 8};
+        g('aa')(u8)(f1)(f2, 42);
+        g()(u8)(f1, 'a')(f2);
+        f1(u8, 55)(g('xx'));
+        f2(u8)(g());
+        dump(g, 'mul2', {
+            f1: {ctrl2data: () => []},
+            f2: {ctrl2data: () => []}
+        }, done);
+    });
+
     it('custom', done => {
 
         const macros = {
