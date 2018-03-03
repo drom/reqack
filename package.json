@@ -13,7 +13,7 @@
     "retest": "eslint lib/*.js && npm run templer && nyc mocha test",
     "redot": "for i in build/*.dot; do dot -Tsvg \"$i\" > \"$i\".svg; done",
     "clean": "rm -rf build",
-    "vlint": "verilator --lint-only build/*.v"
+    "vlint": "for i in build/*.v; do verilator -Irtl --lint-only \"$i\"; done"
   },
   "repository": {
     "type": "git",

@@ -10,22 +10,22 @@ describe('basic', () => {
 
     it('wire', done => {
         const g = fhyper();
-        g()({width: 1})(g());
+        g()({width: 1})();
         dump(g, 'wire', {}, done);
     });
 
     it('eb1', done => {
         const g = fhyper();
-        g()({width: 4, capacity: 1})(g());
+        g()({width: 4, capacity: 1})();
         dump(g, 'eb1', {}, done);
     });
 
     it('add2', done => {
         const g = fhyper();
-        const i0 = g(), i1 = g(), o = g(), add2 = g('add');
+        const i0 = g(), i1 = g(), add2 = g('add');
         i0()(add2);
         i1()(add2);
-        add2()(o);
+        add2()();
         g.edges.forEach(perEdgeSetWidth(8));
         dump(g, 'add2', {}, done);
     });
@@ -38,7 +38,7 @@ describe('basic', () => {
         g('aa')(u8)(f1)(f2, 42);
         g()(u8)(f1, 'a')(f2);
         f1(u8, 55)(g('xx'));
-        f2(u8)(g());
+        f2(u8)();
         dump(g, 'mul2', {
             f1: {ctrl2data: () => []},
             f2: {ctrl2data: () => []}
@@ -49,8 +49,9 @@ describe('basic', () => {
 
         const macros = {
             custom: {
-                data: p => p.i.map(lhs =>
-                    `assign ${lhs.name} = ${ p.t.map(e => e.name).join(' ^ ') };`)
+                data: p =>
+                    p.i.map(lhs =>
+                        `assign ${lhs.wire} = ${ p.t.map(e => e.wire).join(' ^ ') };`)
             }
         };
 
@@ -59,7 +60,7 @@ describe('basic', () => {
         g()()(fn);
         g()({capacity: 1})(fn);
         g()()(fn);
-        fn({capacity: 1})(g());
+        fn({capacity: 1})();
         g.edges.forEach(perEdgeSetWidth(12));
         dump(g, 'custom', macros, done);
     });
@@ -72,8 +73,8 @@ describe('basic', () => {
         // construct interconnect
         g()()(add)(sub);
         g()()(add)(sub);
-        add()(g());
-        sub({capacity: 1})(g());
+        add()();
+        sub({capacity: 1})();
         g.edges.forEach(perEdgeSetWidth(16));
 
         dump(g, 'radix2', {}, done);
@@ -97,8 +98,8 @@ describe('basic', () => {
         ad(rs36)(y);
         bc(rs36)(y);
 
-        x(rs36)(g());
-        y(rs36)(g());
+        x(rs36)();
+        y(rs36)();
 
         dump(g, 'cmul', {}, done);
     });
@@ -143,7 +144,7 @@ describe('basic', () => {
         x_(rs36)(xy);
         y_(rs36)(xy);
 
-        xy(r2s72)(g());
+        xy(r2s72)();
 
         dump(g, 'cmul_concat', {}, done);
     });

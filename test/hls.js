@@ -4,6 +4,9 @@ const hls = require('../lib/hls');
 const expect = require('chai').expect;
 const dump = require('../lib/dump');
 
+const perEdgeSetWidth = w => e =>
+    (e.label = (typeof e.label !== 'object') ? {} : e.label).width = w;
+
 describe('hls', () => {
 
     it('a+b-c', done => {
@@ -16,6 +19,8 @@ describe('hls', () => {
         const resEdge = fn('a', 'b', 'c');
         // resEdge(_g({name: '_res'}));
         const g = resEdge.state.root;
+        resEdge();
+        g.edges.forEach(perEdgeSetWidth(8));
         // expect(g).to.deep.equal(['_sub', ['_add', 'a', 'b'], ['_add', 12, 'c']]);
         // console.log(fhyperDot(g));
         dump(g, 'hls1', {}, done);
