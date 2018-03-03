@@ -30,6 +30,21 @@ describe('basic', () => {
         dump(g, 'add2', {}, done);
     });
 
+    it('tree', done => {
+        const g = fhyper();
+        const t0 = g();
+        const t1 = g();
+        const t2 = g();
+        const t3 = g();
+        const t4 = g();
+        const t5 = g();
+        g()()(t0)(t1);
+        t0()(t2)(t3);
+        t1()(t4)(t5);
+        g.edges.forEach(perEdgeSetWidth(8));
+        dump(g, 'tree', {}, done);
+    });
+
     it('headtail', done => {
         const g = fhyper();
         const f1 = g('f1');
