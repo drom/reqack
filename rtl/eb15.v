@@ -1,4 +1,4 @@
-module eb2a #(
+module eb15 #(
     parameter T_0_WIDTH = 8,
     parameter I_0_WIDTH = 8
 ) (
@@ -15,7 +15,7 @@ module eb2a #(
 
 logic en0, en1, sel;
 
-eb2a_data #(
+eb15_data #(
     .T_0_WIDTH(T_0_WIDTH),
     .I_0_WIDTH(I_0_WIDTH)
 ) udata (
@@ -25,7 +25,7 @@ eb2a_data #(
     .clk(clk), .reset_n(reset_n)
 );
 
-eb2a_ctrl uctrl (
+eb15_ctrl uctrl (
     .t_0_valid(t_0_valid), .t_0_ready(t_0_ready),
     .i_0_valid(i_0_valid), .i_0_ready(i_0_ready),
     .en0(en0), .en1(en1), .sel(sel),

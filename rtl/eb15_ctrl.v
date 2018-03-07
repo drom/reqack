@@ -1,4 +1,4 @@
-module eb2a_ctrl #(
+module eb15_ctrl #(
     parameter S0 = 5'b00001,
     parameter S1 = 5'b00010,
     parameter S2 = 5'b00100,

@@ -1,4 +1,4 @@
-// edge ${id} EB2a
+// edge ${id} EB1.5
 logic [${I_0_WIDTH - 1}:0] reg0_${id}, reg1_${id};
 
 always @(posedge clk) begin
