@@ -126,7 +126,7 @@ describe('basic', () => {
         const s36  = {width: 36};
         const rs36 = {width: 36, capacity: 1};
         const rs72 = {width: 72, capacity: 1};
-        const r2s72 = {width: 72, capacity: 2};
+        const r2s72 = {width: 72, capacity: 1.5};
         const g = fhyper();
 
         const ac = g('concat'), bd = g('concat'), ad = g('concat'), bc = g('concat');
