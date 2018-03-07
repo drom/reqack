@@ -32,10 +32,10 @@ Node with one target socket and multiple initiator sockets.
 ![fork](../img/eager_fork.svg)
 
 ```js
-i[0].acks = or(i[0].ack, ~(i.req))
-i[1].acks = or(i[1].ack, ~(i.req))
+i[0].acks = or(i[0].ack, ~(i[0].req))
+i[1].acks = or(i[1].ack, ~(i[1].req))
 ...
-i[n].acks = or(i[n].ack, ~(i.req))
+i[n].acks = or(i[n].ack, ~(i[n].req))
 
 i[0].ackr.next = and(i[0].acks, ~(t.ack))
 i[1].ackr.next = and(i[1].acks, ~(t.ack))
