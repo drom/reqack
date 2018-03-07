@@ -99,7 +99,7 @@ Edge with 2-entry elastic buffer. This controller type has synchronous
   * Capacity: 1
   * Stall Capacity: 2
 
-![EB2](../img/eb2.svg)
+![EB2](../img/eb1.5.svg)
 
 ```js
 fsm(state.next, {
