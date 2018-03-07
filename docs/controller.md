@@ -8,8 +8,8 @@ Elastic controllers for the graph nodes.
 
 Node with multiple target sockets and one initiator socket.
 
-![reduce](https://rawgit.com/drom/elastic/master/img/reduce.svg)
-![reduce](https://rawgit.com/drom/elastic/master/img/join.svg)
+![reduce](../img/reduce.svg)
+![reduce](../img/join.svg)
 
 ```js
 i.req = and(t[0].req, t[1].req, ..., t[n].req)
@@ -28,21 +28,26 @@ Node with one target socket and multiple initiator sockets.
 
 #### Eager fork
 
-![fork](https://rawgit.com/drom/elastic/master/img/fork.svg)
-![fork](https://rawgit.com/drom/elastic/master/img/eager_fork.svg)
+![fork](../img/fork.svg)
+![fork](../img/eager_fork.svg)
 
 ```js
-t.ack = and(i[0].ack, i[1].ack, ..., i[n].ack)
-
-i[0].ackr.next = and(i[0].ack, ~(i.ack))
-i[1].ackr.next = and(i[1].ack, ~(i.ack))
+i[0].acks = or(i[0].ack, ~(i.req))
+i[1].acks = or(i[1].ack, ~(i.req))
 ...
-i[n].ackr.next = and(i[n].ack, ~(i.ack))
+i[n].acks = or(i[n].ack, ~(i.req))
+
+i[0].ackr.next = and(i[0].acks, ~(t.ack))
+i[1].ackr.next = and(i[1].acks, ~(t.ack))
+...
+i[n].ackr.next = and(i[n].acks, ~(t.ack))
 
 i[0].req = and(t.req, ~(i[0].ackr))
 i[1].req = and(t.req, ~(i[1].ackr))
 ...
 i[n].req = and(t.req, ~(i[n].ackr))
+
+t.ack = and(i[0].acks, i[1].acks, ..., i[n].acks)
 ```
 
 ### MIMO
@@ -74,15 +79,15 @@ Edge with the 1-entry elastic buffer.
 
 **Warning:** *Controller propagates "backpressure" asynchronously.*
 
-![EB1](https://rawgit.com/drom/elastic/master/img/eb1.svg)
+![EB1](../img/eb1.svg)
 
 ```js
-t.ack = ~t.req | i.ack;
+t.ack = ~i.req | i.ack;
 
 i.dat.next = t.dat;
-i.dat.enable = t.req & i.ack;
+i.dat.enable = t.req & t.ack;
 
-i.req.next = (~i.ack | t.req);
+i.req.next = (~t.ack | t.req);
 ```
 
 ## EB:1.5
@@ -94,7 +99,7 @@ Edge with 2-entry elastic buffer. This controller type has synchronous
   * Capacity: 1
   * Stall Capacity: 2
 
-![EB2](https://rawgit.com/drom/elastic/master/img/eb2.svg)
+![EB2](../img/eb2.svg)
 
 ```js
 fsm(state.next, {
