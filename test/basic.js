@@ -20,6 +20,12 @@ describe('basic', () => {
         dump(g, 'eb1', {}, done);
     });
 
+    it('eb15', done => {
+        const g = fhyper();
+        g()({width: 4, capacity: 1.5})();
+        dump(g, 'eb15', {}, done);
+    });
+
     it('add2', done => {
         const g = fhyper();
         const i0 = g(), i1 = g(), add2 = g('add');
