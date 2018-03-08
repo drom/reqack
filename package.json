@@ -1,6 +1,6 @@
 {
   "name": "elastic-circuit",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "elastic logic circuit tools",
   "main": "lib/",
   "directories": {
