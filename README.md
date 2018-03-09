@@ -22,6 +22,7 @@ const fhyper = require('elastic-circuit/lib/fhyper');
 ## Testing
 
 ```sh
+npm i
 npm test
 ```
 
