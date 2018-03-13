@@ -86,6 +86,27 @@ describe('basic', () => {
         dump(g, 'custom', macros, done);
     });
 
+    it('custom parameters', done => {
+
+        const macros = {
+            custom: {
+                parameters: {
+                    PARAM1: () => 42,
+                    PARAM2: index => 'filename' + index + '.mif'
+                }
+            }
+        };
+
+        const g = fhyper();
+        const fn = g('custom');
+        g()()(fn);
+        g()({capacity: 1})(fn);
+        g()()(fn);
+        fn({capacity: 1})();
+        g.edges.forEach(perEdgeSetWidth(12));
+        dump(g, 'custom_params', macros, done);
+    });
+
     it('radix2', done => {
         const g = fhyper('datapath');
         // construct functional nodes
