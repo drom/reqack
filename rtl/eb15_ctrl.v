@@ -6,17 +6,17 @@ module eb15_ctrl #(
     parameter S4 = 5'b10000
 ) (
     input  clk, reset_n,
-    input        t_0_valid,
-    output logic t_0_ready,
-    output logic i_0_valid,
-    output logic en0, en1, sel,
-    input        i_0_ready
+    input  t_0_valid,
+    output t_0_ready,
+    output i_0_valid,
+    output en0, en1, sel,
+    input  i_0_ready
 );
 
 // State machine
-logic [4:0] state, nxt_state;
+reg [4:0] state, nxt_state;
 
-always_ff @(posedge clk or negedge reset_n)
+always @(posedge clk or negedge reset_n)
     if (~reset_n) state <= 5'b00001;
     else          state <= nxt_state;
 
@@ -27,7 +27,7 @@ always_ff @(posedge clk or negedge reset_n)
 // 3     x  0   1       1     valid 0     1
 // 4     1  0   0       1     0     0     1
 
-always_comb
+always @*
     casez({state, t_0_valid, i_0_ready})
         {S0, 2'b1?} : nxt_state = S1;
         {S1, 2'b01} : nxt_state = S0;
