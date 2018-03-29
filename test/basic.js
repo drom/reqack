@@ -26,6 +26,12 @@ describe('basic', () => {
         dump(g, 'eb15', {}, done);
     });
 
+    it('eb17', done => {
+        const g = fhyper();
+        g()({width: 11, capacity: 1.7})();
+        dump(g, 'eb17', {}, done);
+    });
+
     it('add2', done => {
         const g = fhyper();
         const i0 = g(), i1 = g(), add2 = g('add');
