@@ -1,6 +1,6 @@
 {
   "name": "reqack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "elastic logic circuit tools",
   "main": "lib/",
   "directories": {
@@ -18,7 +18,14 @@
     "type": "git",
     "url": "git+https://github.com/drom/reqack.git"
   },
-  "keywords": ["elastic", "verilog", "pipeline", "RTL", "HDL", "HLS"],
+  "keywords": [
+    "elastic",
+    "verilog",
+    "pipeline",
+    "RTL",
+    "HDL",
+    "HLS"
+  ],
   "author": "Aliaksei Chapyzhenka",
   "license": "MIT",
   "bugs": {
