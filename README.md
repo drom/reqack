@@ -1,5 +1,5 @@
-[![Travis Status](https://travis-ci.org/drom/elastic.svg?branch=master)](https://travis-ci.org/drom/reqack)
-[![NPM version](https://img.shields.io/npm/v/elastic-circuit.svg)](https://www.npmjs.org/package/reqack)
+[![Travis Status](https://travis-ci.org/drom/reqack.svg?branch=master)](https://travis-ci.org/drom/reqack)
+[![NPM version](https://img.shields.io/npm/v/reqack.svg)](https://www.npmjs.org/package/reqack)
 
 Elastic circuit tools
 
