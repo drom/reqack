@@ -3,7 +3,7 @@
 
 # REQuest - ACKnowledge
 
-Tool to construct, transform and analyze digital circuits based on {req,ack} transactional protocol.
+Tool to construct, transform and analyze digital circuits based on elastic transactional protocol and Request-Acknowledge handshake.
 
 ## Use
 
