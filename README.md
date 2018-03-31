@@ -1,7 +1,9 @@
 [![Travis Status](https://travis-ci.org/drom/reqack.svg?branch=master)](https://travis-ci.org/drom/reqack)
 [![NPM version](https://img.shields.io/npm/v/reqack.svg)](https://www.npmjs.org/package/reqack)
 
-Elastic circuit tools
+# REQuest - ACKnowledge
+
+Tool to construct, transform and analyze digital circuits based on {req,ack} transactional protocol.
 
 ## Use
 
@@ -16,8 +18,6 @@ const reqack = require('reqack');
 ```
 
 ## API
-
-### fhyper
 
 ## Testing
 
