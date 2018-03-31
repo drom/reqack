@@ -32,6 +32,12 @@ describe('basic', () => {
         dump(g, 'eb17', {}, done);
     });
 
+    it('ebfifo', done => {
+        const g = fhyper();
+        g()({width: 12, capacity: 5})();
+        dump(g, 'ebfifo', {}, done);
+    });
+
     it('add2', done => {
         const g = fhyper();
         const i0 = g(), i1 = g(), add2 = g('add');
