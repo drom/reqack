@@ -13,6 +13,8 @@ module eb_fifo_ctrl #(
 );
 
 reg [DEPTHLOG2MO : 0] status_cnt;
+reg [DEPTHLOG2MO : 0] rd_ptr_calc;
+                
 
 assign t_0_ack = !(status_cnt == DEPTHMO);
 assign ren = i_0_req && i_0_ack;
@@ -29,8 +31,13 @@ always @(posedge clk or negedge reset_n)
     else if (t_0_req && t_0_ack) wr_ptr <= (wr_ptr == DEPTHMO) ? 0 : (wr_ptr + 1);
 
 always @(posedge clk or negedge reset_n)
-    if (~reset_n) rd_ptr <= 0;
-    else if (i_0_req && i_0_ack) rd_ptr <= (((rd_ptr == DEPTHMO) && (status_cnt != 0)) ? 0 : (rd_ptr + 1));
+    if (~reset_n) begin 
+       rd_ptr <= 0;
+       rd_ptr_calc <= 0
+    else begin
+       rd_ptr<=(status_cnt!=0)?rd_ptr_calc+1:rd_ptr_calc;
+       if (i_0_req && i_0_ack) rd_ptr_calc <= (((rd_ptr_calc == DEPTHMO) && (status_cnt != 0)) ? 0 : (rd_ptr_calc + 1));
+    end
 
 always @(posedge clk or negedge reset_n)
     if (~reset_n) status_cnt <= 0;
