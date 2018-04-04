@@ -6,8 +6,8 @@ module eb_fifo_ctrl #(
     output              t_0_ack,
     output reg          i_0_req,
     input               i_0_ack,
-    output reg [DEPTHLOG2MO : 0] wr_ptr,
-    output reg [DEPTHLOG2MO : 0] rd_ptr,
+    output reg  [DEPTHLOG2MO : 0] wr_ptr,
+    output wire [DEPTHLOG2MO : 0] rd_ptr,
     output  wen, ren,
     input   clk, reset_n
 );
