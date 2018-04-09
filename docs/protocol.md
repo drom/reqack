@@ -1,4 +1,6 @@
-## Elastic protocol
+## Link protocol
+
+All elastic components connected with links. Signaling on each link has to folow these rules:
 
 ### Rules
 
