@@ -5,4 +5,4 @@
    * initiator agent drives `req` and `dat` signals
    * target agent drives `ack` signal
    * `req & ack` = transaction
-   * once initiator asserted `req` it has to stay `high` until target acknowledge it with `ack`
+   * once initiator asserted `req`, both `req` and `dat` has to stay unchanged until target acknowledge it with `ack`.
