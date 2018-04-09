@@ -5,6 +5,10 @@
 
 JavaScript Tool set to construct, transform and analyze digital circuits based on elastic transactional protocol and Request-Acknowledge [handshake](./docs/controller.md).
 
+User describes circuit JavaScript API, add standard components from the library, or create new componets.
+
+User can transform constructed circuit by changing buffer capacity or performing other correct by construction transformations.
+
 ## Use
 
 ### Node.js
