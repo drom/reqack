@@ -3,7 +3,7 @@
 
 # REQuest ⇄ ACKnowledge
 
-JavaScript Tool set to construct, transform and analyze digital circuits based on elastic transactional protocol and Request-Acknowledge handshake.
+JavaScript Tool set to construct, transform and analyze digital circuits based on elastic transactional protocol and Request-Acknowledge [handshake](./docs/controller.md).
 
 ## Use
 
