@@ -240,14 +240,23 @@ describe('basic', () => {
     it('deconcat', done => {
         const g = circuit();
 
-        const dut = g('deconcat');
+        const dut0 = g('deconcat');
+        const filler = g();
+        const dut2 = g('deconcat');
 
-        g()({width: 32})(dut);
+        const source = g()({width: 32, capacity: 1});
+        source(dut0);
+        source(filler);
+        source(dut2);
 
-        dut({width: 16})(g());
-        dut({width: 8})(g());
-        dut({width: 4})(g());
-        dut({width: 4})(g());
+        dut0({width: 16})(g());
+        dut0({width: 8})(g());
+        dut0({width: 4})(g());
+        dut0({width: 4})(g());
+
+        dut2({width: 16})(g());
+        dut2({width: 16})(g());
+
         dump(g, 'deconcat', nodeMacros, done);
     });
 
