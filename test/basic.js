@@ -2,6 +2,9 @@
 
 const fhyper = require('../lib/fhyper');
 const dump = require('../lib/dump');
+const reqack = require('../lib');
+
+const nodeMacros = reqack.macros;
 
 const perEdgeSetWidth = w => e =>
     (e.label = (typeof e.label !== 'object') ? {} : e.label).width = w;
@@ -233,4 +236,19 @@ describe('basic', () => {
 
         dump(gg, 'retiming', {}, done);
     });
+
+    it('deconcat', done => {
+        const g = fhyper();
+
+        const dut = g('deconcat');
+
+        g()({width: 32})(dut);
+
+        dut({width: 16})(g());
+        dut({width: 8})(g());
+        dut({width: 4})(g());
+        dut({width: 4})(g());
+        dump(g, 'deconcat', nodeMacros, done);
+    });
+
 });
