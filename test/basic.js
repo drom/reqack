@@ -1,9 +1,9 @@
 'use strict';
 
-const fhyper = require('../lib/fhyper');
 const dump = require('../lib/dump');
 const reqack = require('../lib');
 
+const circuit = reqack.circuit;
 const nodeMacros = reqack.macros;
 
 const perEdgeSetWidth = w => e =>
@@ -12,37 +12,37 @@ const perEdgeSetWidth = w => e =>
 describe('basic', () => {
 
     it('wire', done => {
-        const g = fhyper();
+        const g = circuit();
         g()({width: 1})();
         dump(g, 'wire', {}, done);
     });
 
     it('eb1', done => {
-        const g = fhyper();
+        const g = circuit();
         g()({width: 4, capacity: 1})();
         dump(g, 'eb1', {}, done);
     });
 
     it('eb15', done => {
-        const g = fhyper();
+        const g = circuit();
         g()({width: 4, capacity: 1.5})();
         dump(g, 'eb15', {}, done);
     });
 
     it('eb17', done => {
-        const g = fhyper();
+        const g = circuit();
         g()({width: 11, capacity: 1.7})();
         dump(g, 'eb17', {}, done);
     });
 
     it('ebfifo', done => {
-        const g = fhyper();
+        const g = circuit();
         g()({width: 32, capacity: 60})();
         dump(g, 'ebfifo', {}, done);
     });
 
     it('add2', done => {
-        const g = fhyper();
+        const g = circuit();
         const i0 = g(), i1 = g(), add2 = g('add');
         i0()(add2);
         i1()(add2);
@@ -52,7 +52,7 @@ describe('basic', () => {
     });
 
     it('tree', done => {
-        const g = fhyper();
+        const g = circuit();
         const t0 = g();
         const t1 = g();
         const t2 = g();
@@ -67,7 +67,7 @@ describe('basic', () => {
     });
 
     it('headtail', done => {
-        const g = fhyper();
+        const g = circuit();
         const f1 = g('f1');
         const f2 = g('f2');
         const u8 = {width: 8};
@@ -91,7 +91,7 @@ describe('basic', () => {
             }
         };
 
-        const g = fhyper();
+        const g = circuit();
         const fn = g('custom');
         g()()(fn);
         g()({capacity: 1})(fn);
@@ -112,7 +112,7 @@ describe('basic', () => {
             }
         };
 
-        const g = fhyper();
+        const g = circuit();
         const fn = g('custom');
         g()()(fn);
         g()({capacity: 1})(fn);
@@ -123,7 +123,7 @@ describe('basic', () => {
     });
 
     it('radix2', done => {
-        const g = fhyper('datapath');
+        const g = circuit('datapath');
         // construct functional nodes
         const add = g('add'), sub = g('sub');
 
@@ -141,7 +141,7 @@ describe('basic', () => {
         // x = (a * c - b * d); y = (a * d + b * c);
         const rs18 = {capacity: 1, width: 18};
         const rs36 = {capacity: 1, width: 36};
-        const g = fhyper();
+        const g = circuit();
 
         const ac = g('mul'), bd = g('mul'), ad = g('mul'), bc = g('mul');
         g()(rs18)(ac)(ad);
@@ -169,7 +169,7 @@ describe('basic', () => {
         const rs36 = {width: 36, capacity: 1};
         const rs72 = {width: 72, capacity: 1};
         const r2s72 = {width: 72, capacity: 1.5};
-        const g = fhyper();
+        const g = circuit();
 
         const ac = g('concat'), bd = g('concat'), ad = g('concat'), bc = g('concat');
 
@@ -207,7 +207,7 @@ describe('basic', () => {
     });
 
     it('retiming', done => {
-        const gg = fhyper();
+        const gg = circuit();
 
         // construct circuit
         const a = gg('a');
@@ -238,7 +238,7 @@ describe('basic', () => {
     });
 
     it('deconcat', done => {
-        const g = fhyper();
+        const g = circuit();
 
         const dut = g('deconcat');
 
