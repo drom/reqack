@@ -36,6 +36,7 @@
   "devDependencies": {
     "@drom/eslint-config": "^0.7.0",
     "chai": "^4.1.2",
+    "dagre": "^0.8.2",
     "escodegen": "^1.9.0",
     "eslint": "^4.8.0",
     "esprima": "^4.0.0",
@@ -44,6 +45,7 @@
     "lodash.range": "^3.2.0",
     "mocha": "^5.0.0",
     "nyc": "^11.2.1",
+    "onml": "^0.4.1",
     "yargs": "^11.0.0"
   },
   "eslintConfig": {
