@@ -21,8 +21,8 @@ assign wen = t_0_req && t_0_ack;
 
 always @(posedge clk or negedge reset_n)
     if (~reset_n) i_0_req <= 1'b0;
-    else if (status_cnt == 0) i_0_req <= 0;
-    else if ((i_0_req && i_0_ack) && (status_cnt == 1)) i_0_req <= 0;
+    else if (status_cnt == 0 && !(t_0_req && t_0_ack)) i_0_req <= 0;
+    else if ((i_0_req && i_0_ack)  && !(t_0_req && t_0_ack) && (status_cnt == 1)) i_0_req <= 0;
     else i_0_req <= 1;
 
 always @(posedge clk or negedge reset_n)
