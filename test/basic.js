@@ -101,6 +101,21 @@ describe('basic', () => {
         dump(g, 'custom', macros, done);
     });
 
+    it('custom2', done => {
+        const macros = {
+            '3 - x': {data: p => `assign ${p.i[0].wire} = 3 - ${ p.t[0].wire };`},
+            'x << 2': {data: p => `assign ${p.i[0].wire} = ${ p.t[0].wire } << 2;`}
+        };
+        const g = circuit();
+        const n0 = g('3 - x');
+        const n1 = g('x << 2');
+        g()()(n0);
+        n0({capacity: 1})(n1);
+        n1({capacity: 1})(g());
+        g.edges.forEach(perEdgeSetWidth(12));
+        dump(g, 'custom2', macros, done);
+    });
+
     it('custom parameters', done => {
 
         const macros = {
