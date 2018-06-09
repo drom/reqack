@@ -116,6 +116,25 @@ describe('basic', () => {
         dump(g, 'custom2', macros, done);
     });
 
+    it('custom3', done => {
+        const macros = {
+            'floor': {
+                data: params => {
+                    const t = params.t[0];
+                    const i = params.i[0];
+                    const mask = t.width + '\'b' + '1'.repeat(t.m) + '0'.repeat(t.width - t.m);
+                    return `assign ${i.wire} = ${t.wire} & ${mask};`;
+                }
+            }
+        };
+        const q3_12 = {width: 16, m: 3};
+        const g = circuit();
+        const n0 = g('floor');
+        g()(q3_12)(n0);
+        n0(q3_12)(g());
+        dump(g, 'custom3', macros, done);
+    });
+
     it('custom parameters', done => {
 
         const macros = {
