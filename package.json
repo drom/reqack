@@ -17,7 +17,8 @@
     "prepublish": "npm run test && mkdir -p build && npm run browserify"
   },
   "files": [
-    "build/reqack.js"
+    "build/reqack.js",
+    "lib/*"
   ],
   "unpkg": "build/reqack.js",
   "repository": {
