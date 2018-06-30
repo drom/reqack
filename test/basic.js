@@ -135,6 +135,29 @@ describe('basic', () => {
         dump(g, 'custom3', macros, done);
     });
 
+    it('customMIMO', done => {
+
+        const macros = {
+            mimo: {data: p => p.i.map((lhs, i) =>
+                `assign ${lhs.wire} = ${
+                    p.t.map(e => e.wire)
+                        .concat(i + 1)
+                        .join(' ^ ')
+                };`
+            )}
+        };
+
+        const g = circuit();
+        const fn = g('mimo'); // 3x2
+        g()()(fn);
+        g()()(fn);
+        g()()(fn);
+        fn({capacity: 1})();
+        fn({capacity: 1})();
+        g.edges.forEach(perEdgeSetWidth(16));
+        dump(g, 'customMIMO', macros, done);
+    });
+
     it('custom parameters', done => {
 
         const macros = {
