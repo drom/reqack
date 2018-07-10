@@ -18,7 +18,8 @@
   },
   "files": [
     "build/reqack.js",
-    "lib/*"
+    "lib",
+    "rtl"
   ],
   "unpkg": "build/reqack.js",
   "repository": {
