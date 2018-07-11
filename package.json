@@ -55,7 +55,7 @@
     "lodash.range": "^3.2.0",
     "mocha": "^5.0.0",
     "nyc": "^11.2.1",
-    "onml": "^0.4.1",
+    "onml": "^0.4.5",
     "yargs": "^11.0.0"
   },
   "eslintConfig": {
