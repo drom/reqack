@@ -1,6 +1,6 @@
 {
   "name": "reqack",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "description": "elastic logic circuit tools",
   "main": "lib/",
   "directories": {
