@@ -38,16 +38,16 @@ A **node** can be constructed by calling the circuit function. Optional `node_la
 const node1 = g('node_label');
 ```
 
-A **link** can be constructed by calling the node function. Optional argument is an `Object` with two major properties (width, capacity).
+A **edge** can be constructed by calling the node function. Optional argument is an `Object` with two major properties (width, capacity).
 
 ```js
-const link1 = node1({width: 32, capacity: 1});
+const edge1 = node1({width: 32, capacity: 1});
 ```
 
-One node can be **connected** to another node by calling link with a destination node.
+One node can be **connected** to another node by calling edge with a destination node.
 
 ```js
-link1(node2); // -> link1
+edge1(node2); // -> edge1
 ```
 
 Resulted Verilog RTL can be produced by calling
