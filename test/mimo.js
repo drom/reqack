@@ -76,3 +76,4 @@ describe('mimo', () => {
     });
 
 });
+/* eslint no-console: 0 */

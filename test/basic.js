@@ -127,11 +127,11 @@ describe('basic', () => {
                 }
             }
         };
-        const q3_12 = {width: 16, m: 3};
+        const q3f12 = {width: 16, m: 3};
         const g = circuit();
         const n0 = g('floor');
-        g()(q3_12)(n0);
-        n0(q3_12)(g());
+        g()(q3f12)(n0);
+        n0(q3f12)(g());
         dump(g, 'custom3', macros, done);
     });
 
