@@ -51,6 +51,20 @@ describe('basic', () => {
         dump(g, 'add2', {}, done);
     });
 
+    it('add3', done => {
+        const g = circuit();
+        g('add', g()(), g()(), g()())()(g());
+        g.edges.forEach(perEdgeSetWidth(8));
+        dump(g, 'add3', {}, done);
+    });
+
+    it('add5', done => {
+        const g = circuit();
+        g('add', [0, 1, 2, 3, 4].map(() => g()()))()(g());
+        g.edges.forEach(perEdgeSetWidth(8));
+        dump(g, 'add5', {}, done);
+    });
+
     it('tree', done => {
         const g = circuit();
         const t0 = g();
