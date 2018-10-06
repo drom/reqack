@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "eslint lib/*.js test/*.js && mocha test",
+    "test": "eslint lib/*.js test/*.js && npm run clean && mocha test",
     "retest": "eslint lib/*.js && nyc mocha test",
     "redot": "for i in build/*; do for j in \"$i\"/*.dot; do dot -Tsvg \"$j\" > \"$j\".svg; done; done",
     "clean": "rm -rf build",
