@@ -172,6 +172,18 @@ describe('basic', () => {
         dump(g, 'customMIMO', macros, done);
     });
 
+    it('concat', done => {
+        const i16 = {width: 16};
+        const i12 = {width: 12};
+        const g = circuit();
+        const fn = g({}, g()(i16), g()(i16), g()(i16));
+        fn(i12)(g());
+        fn(i12)(g());
+        fn(i12)(g());
+        fn(i12)(g());
+        dump(g, 'concat', {}, done);
+    });
+
     it('custom parameters', done => {
 
         const macros = {
@@ -215,19 +227,21 @@ describe('basic', () => {
         const g = circuit();
 
         const ac = g('mul'), bd = g('mul'), ad = g('mul'), bc = g('mul');
+
         g()(rs18)(ac)(ad);
         g()(rs18)(bd)(bc);
         g()(rs18)(ac)(bc);
         g()(rs18)(bd)(ad);
 
-        const x = g('sub'), y = g('add');
-        ac(rs36)(x);
-        bd(rs36)(x);
-        ad(rs36)(y);
-        bc(rs36)(y);
+        g('sub',
+            ac(rs36),
+            bd(rs36)
+        )(rs36)();
 
-        x(rs36)();
-        y(rs36)();
+        g('add',
+            ad(rs36),
+            bc(rs36)
+        )(rs36)();
 
         dump(g, 'cmul', {}, done);
     });
@@ -242,37 +256,27 @@ describe('basic', () => {
         const r2s72 = {width: 72, capacity: 1.5};
         const g = circuit();
 
-        const ac = g('concat'), bd = g('concat'), ad = g('concat'), bc = g('concat');
+        const ac = g({}), bd = g({}), ad = g({}), bc = g({});
 
         g()(s18)(ac)(ad);
         g()(s18)(bd)(bc);
         g()(s18)(ac)(bc);
         g()(s18)(bd)(ad);
 
-        const ac_ = g('mul'), bd_ = g('mul'), ad_ = g('mul'), bc_ = g('mul');
-
-        ac(rs36)(ac_);
-        bd(rs36)(bd_);
-        ad(rs36)(ad_);
-        bc(rs36)(bc_);
-
-        const x = g('concat'), y = g('concat');
-
-        ac_(s36)(x);
-        bd_(s36)(x);
-        ad_(s36)(y);
-        bc_(s36)(y);
-
-        const x_ = g('sub'), y_ = g('add');
-
-        x(rs72)(x_);
-        y(rs72)(y_);
-
-        const xy = g('concat');
-        x_(rs36)(xy);
-        y_(rs36)(xy);
-
-        xy(r2s72)();
+        g({},
+            g('sub',
+                g({},
+                    g('mul', ac(rs36))(s36),
+                    g('mul', bd(rs36))(s36)
+                )(rs72)
+            )(rs36),
+            g('add',
+                g({},
+                    g('mul', ad(rs36))(s36),
+                    g('mul', bc(rs36))(s36)
+                )(rs72)
+            )(rs36)
+        )(r2s72)();
 
         dump(g, 'cmul_concat', {}, done);
     });
