@@ -152,17 +152,20 @@ describe('basic', () => {
     it('customMIMO', done => {
 
         const macros = {
-            mimo: {data: p => p.i.map((lhs, i) =>
-                `assign ${lhs.wire} = ${
-                    p.t.map(e => e.wire)
-                        .concat(i + 1)
-                        .join(' ^ ')
-                };`
-            )}
+            mimo: {
+                name: 'mimo',
+                data: p => p.i.map((lhs, i) =>
+                    `assign ${lhs.wire} = ${
+                        p.t.map(e => e.wire)
+                            .concat(i + 1)
+                            .join(' ^ ')
+                    };`
+                )
+            }
         };
 
         const g = circuit();
-        const fn = g('mimo'); // 3x2
+        const fn = g(macros.mimo); // 3x2
         g()()(fn);
         g()()(fn);
         g()()(fn);
@@ -315,9 +318,9 @@ describe('basic', () => {
     it('deconcat', done => {
         const g = circuit();
 
-        const dut0 = g('deconcat');
+        const dut0 = g({});
         const filler = g();
-        const dut2 = g('deconcat');
+        const dut2 = g({});
 
         const source = g()({width: 32, capacity: 1});
         source(dut0);
