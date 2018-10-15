@@ -43,7 +43,7 @@ describe('basic', () => {
 
     it('add2', done => {
         const g = circuit();
-        const i0 = g(), i1 = g(), add2 = g('add');
+        const i0 = g(), i1 = g(), add2 = g('+');
         i0()(add2);
         i1()(add2);
         add2()();
@@ -53,14 +53,14 @@ describe('basic', () => {
 
     it('add3', done => {
         const g = circuit();
-        g('add', g()(), g()(), g()())()(g());
+        g('+', g()(), g()(), g()())()(g());
         g.edges.forEach(perEdgeSetWidth(8));
         dump(g, 'add3', {}, done);
     });
 
     it('add5', done => {
         const g = circuit();
-        g('add', [0, 1, 2, 3, 4].map(() => g()()))()(g());
+        g('+', [0, 1, 2, 3, 4].map(() => g()()))()(g());
         g.edges.forEach(perEdgeSetWidth(8));
         dump(g, 'add5', {}, done);
     });
@@ -117,17 +117,23 @@ describe('basic', () => {
 
     it('custom2', done => {
         const macros = {
-            '3 - x': {data: p => `assign ${p.i[0].wire} = 3 - ${ p.t[0].wire };`},
-            'x << 2': {data: p => `assign ${p.i[0].wire} = ${ p.t[0].wire } << 2;`}
+            'c1': {
+                name: 'c1',
+                data: p => `assign ${p.i[0].wire} = 3 - ${ p.t[0].wire };`
+            },
+            'c2': {
+                name: 'c2',
+                data: p => `assign ${p.i[0].wire} = ${ p.t[0].wire } << 2;`
+            }
         };
         const g = circuit();
-        const n0 = g('3 - x');
-        const n1 = g('x << 2');
+        const n0 = g(macros.c1);
+        const n1 = g(macros.c2);
         g()()(n0);
         n0({capacity: 1})(n1);
         n1({capacity: 1})(g());
         g.edges.forEach(perEdgeSetWidth(12));
-        dump(g, 'custom2', macros, done);
+        dump(g, 'custom2', {}, done);
     });
 
     it('custom3', done => {
@@ -211,7 +217,7 @@ describe('basic', () => {
     it('radix2', done => {
         const g = circuit('datapath');
         // construct functional nodes
-        const add = g('add'), sub = g('sub');
+        const add = g('+'), sub = g('-');
 
         // construct interconnect
         g()()(add)(sub);
@@ -229,59 +235,24 @@ describe('basic', () => {
         const rs36 = {capacity: 1, width: 36};
         const g = circuit();
 
-        const ac = g('mul'), bd = g('mul'), ad = g('mul'), bc = g('mul');
+        const ac = g('*'), bd = g('*'), ad = g('*'), bc = g('*');
 
         g()(rs18)(ac)(ad);
         g()(rs18)(bd)(bc);
         g()(rs18)(ac)(bc);
         g()(rs18)(bd)(ad);
 
-        g('sub',
+        g('-',
             ac(rs36),
             bd(rs36)
         )(rs36)();
 
-        g('add',
+        g('+',
             ad(rs36),
             bc(rs36)
         )(rs36)();
 
         dump(g, 'cmul', {}, done);
-    });
-
-    it('cmul_concat', done => {
-        // x = (a * c - b * d); y = (a * d + b * c);
-        const s18  = {width: 18};
-        // const rs18 = {capacity: 1, width: 18};
-        const s36  = {width: 36};
-        const rs36 = {width: 36, capacity: 1};
-        const rs72 = {width: 72, capacity: 1};
-        const r2s72 = {width: 72, capacity: 1.5};
-        const g = circuit();
-
-        const ac = g({}), bd = g({}), ad = g({}), bc = g({});
-
-        g()(s18)(ac)(ad);
-        g()(s18)(bd)(bc);
-        g()(s18)(ac)(bc);
-        g()(s18)(bd)(ad);
-
-        g({},
-            g('sub',
-                g({},
-                    g('mul', ac(rs36))(s36),
-                    g('mul', bd(rs36))(s36)
-                )(rs72)
-            )(rs36),
-            g('add',
-                g({},
-                    g('mul', ad(rs36))(s36),
-                    g('mul', bc(rs36))(s36)
-                )(rs72)
-            )(rs36)
-        )(r2s72)();
-
-        dump(g, 'cmul_concat', {}, done);
     });
 
     it('retiming', done => {
