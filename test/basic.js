@@ -65,6 +65,13 @@ describe('basic', () => {
         dump(g, 'add5', {}, done);
     });
 
+    it('ops', done => {
+        const g = circuit();
+        g('~ & |', [0, 1, 2].map(() => g()()))()(g());
+        g.edges.forEach(perEdgeSetWidth(8));
+        dump(g, 'ops', {}, done);
+    });
+
     it('tree', done => {
         const g = circuit();
         const t0 = g();
