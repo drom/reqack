@@ -1,5 +1,7 @@
-[![Travis Status](https://travis-ci.org/drom/reqack.svg?branch=master)](https://travis-ci.org/drom/reqack)
 [![NPM version](https://img.shields.io/npm/v/reqack.svg)](https://www.npmjs.org/package/reqack)
+[![Linux](https://github.com/drom/reqack/actions/workflows/linux.yml/badge.svg)](https://github.com/drom/reqack/actions/workflows/linux.yml)
+[![MacOS](https://github.com/drom/reqack/actions/workflows/macos.yml/badge.svg)](https://github.com/drom/reqack/actions/workflows/macos.yml)
+[![Windows](https://github.com/drom/reqack/actions/workflows/windows.yml/badge.svg)](https://github.com/drom/reqack/actions/workflows/windows.yml)
 [TUTORIAL](https://beta.observablehq.com/@drom/reqack)
 
 # REQuest ⇄ ACKnowledge
