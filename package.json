@@ -59,9 +59,9 @@
     "yargs": "^17.0.1"
   },
   "eslintConfig": {
-    "extends": "@drom/eslint-config/eslint4/node4",
-    "rules": {
-      "no-console": 1
+    "extends": "@drom/eslint-config/eslint4/node8",
+    "parserOptions": {
+      "ecmaVersion": 2020
     }
   }
 }
