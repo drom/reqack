@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,7 +12,7 @@
    viewBox="0 0 400 256"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
    sodipodi:docname="eb1.5.svg">
   <defs
      id="defs4">
@@ -838,9 +836,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.9023438"
-     inkscape:cx="200"
-     inkscape:cy="128"
+     inkscape:zoom="4"
+     inkscape:cx="164.16873"
+     inkscape:cy="121.57386"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -849,11 +847,12 @@
      inkscape:object-nodes="true"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-text-baseline="true"
-     inkscape:window-width="1276"
-     inkscape:window-height="689"
-     inkscape:window-x="0"
-     inkscape:window-y="720"
-     inkscape:window-maximized="0">
+     inkscape:window-width="3840"
+     inkscape:window-height="2073"
+     inkscape:window-x="1920"
+     inkscape:window-y="48"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid4136"
@@ -877,6 +876,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-796.36216)">
+    <rect
+       style="fill:#ffffff;fill-opacity:0.988691;stroke-width:0.377953;stroke-linecap:round;stroke-linejoin:bevel;stop-color:#000000"
+       id="rect1334"
+       width="400"
+       height="256"
+       x="0"
+       y="796.36218" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#0069de;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 312,956.36216 0,16"
