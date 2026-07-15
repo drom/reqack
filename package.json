@@ -13,8 +13,11 @@
     "redot": "for i in build/*; do for j in \"$i\"/*.dot; do dot -Tsvg \"$j\" > \"$j\".svg; done; done",
     "clean": "rm -rf build",
     "vlint": "for i in build/*; do for j in \"$i\"/*.v; do verilator -Irtl --lint-only \"$j\"; done; done",
-    "browserify": "browserify --standalone reqack lib/index.js > build/reqack.js",
-    "prepublish": "npm run test && mkdir -p build && npm run browserify"
+    "bundle": "esbuild lib/index.js --bundle --format=iife --global-name=reqack --outfile=build/reqack.js",
+    "prepublish": "npm run test && mkdir -p build && npm run bundle"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "files": [
     "build/reqack.js",
@@ -49,17 +52,14 @@
     "onml": "^2.1.0"
   },
   "devDependencies": {
-    "@drom/eslint-config": "^0.12.0",
-    "browserify": "^17.0.1",
+    "@drom/eslint-config": "^1.0.0",
     "chai": "^4.5.0",
-    "eslint": "^8.57.1",
+    "commander": "^12.1.0",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.15.0",
     "fs-extra": "^11.2.0",
     "lodash.range": "^3.2.0",
-    "mocha": "^8.4.0",
-    "nyc": "^17.1.0",
-    "yargs": "^17.7.2"
-  },
-  "eslintConfig": {
-    "extends": "@drom/eslint-config/eslint8/node12"
+    "mocha": "^11.0.0",
+    "nyc": "^17.1.0"
   }
 }
